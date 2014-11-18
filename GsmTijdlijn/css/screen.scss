@@ -14,11 +14,12 @@ body, html {
 }
 
 /* SLIDES */
-section {
+.slide{
   min-width: 960px;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: scroll;
   height: 100%;
   width: 100%;
   position: fixed;
@@ -28,8 +29,6 @@ section {
 
 //slide 1
 #slide-1 {
-  display: table;
-  margin: 0;
   #back{
     width: 100%;
     height: 100%;
@@ -45,31 +44,30 @@ section {
     width: 100%;
     height: 500px;
     position: absolute;
-    background-color: #ffffff;
   }
 
-  #contentSlide1{
-    z-index: 1;
+  h1,h2{
     position: fixed;
-    left: 24%;
-    top: 26%;
-    h1{
-      font-size: 110px;
-      text-align: center;
-      font-family: 'Montserrat', sans-serif;
-      color: #ffffff;
-      text-shadow: 3px 1px 0px #b1818a;
-    }
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top:30%;
+    text-align: center;
+    color: #ffffff;
+  }
 
-    h2{
-      /*position: fixed;
-      top: 54%;
-      left: 38%;*/
-      /*acts like a table cell*/
-      font-size: 65px;
-      font-family: 'Montserrat', sans-serif;
-      color: #b1818a;
-    }
+  h1{
+    font-size: 110px;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 3px 1px 0px #6c6c6c;
+  }
+
+  h2{
+    font-size: 65px;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 2px 1px 0px #6c6c6c;
+    top: 50%;
   }
 
 }
@@ -105,9 +103,6 @@ section {
   }
 
   h4{
-    position: fixed;
-    bottom: 1%;
-    left:50%;
     font-family: 'Montserrat', sans-serif;
     color: #ffffff;
     font-size: 45px;
@@ -121,7 +116,7 @@ section {
 
 //slide 4
 #slide-4{
-    background-image:url('../img/style/backgrounds/nexus-5-india-launch-635.jpg');
+  background-image:url('../img/style/backgrounds/nexus-5-india-launch-635.jpg');
 }
 
 //slide 5
