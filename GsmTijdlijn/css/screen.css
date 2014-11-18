@@ -7,30 +7,11 @@
 body, html {
   height: 100%;
   min-height: 100%;
-  background-color: #2e2e2f;
-  background-size: 15px 30px; }
-
-/* preloader */
-#preloader {
-  display: none;
-  width: 1px;
-  height: 1px;
-  display: none; }
-
-.loading {
-  background: url("../img/style/preloader/ico_loading.gif") no-repeat center center; }
-
-.loaded section,
-.no-js section {
-  opacity: 1;
-  -webkit-transition: opacity 300ms ease-out;
-  -moz-transition: opacity 300ms ease-out;
-  transition: opacity 300ms ease-out; }
+  background-color: #2e2e2f; }
 
 /* SLIDES */
 section {
   min-width: 960px;
-  opacity: 0;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
