@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Demo - Zoom-in on scroll using Scrollr.js</title>
+		<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/screen.css">
+    </head>
+    <body class="loading">
+       	<div id="preloader">
+	       	<img src="img/style/backgrounds/nexus-5-india-launch-635.jpg"/>
+			<img src="img/style/backgrounds/img_road.jpg"/>
+			<img src="img/style/backgrounds/img_earth2.jpg"/>
+       	</div>
+
+		<section id="progress" data-0="width:0%;" data-end="width:100%;">
+		</section>
+
+		<section id="slide-1" data-0="width: 156%; height: 156%; top: -28%; left: -28%;" data-800="width: 100%; height: 100%; top: 0%; left: 0%;">
+			<!--data-0="width: 125%; height: 125%; top: -12%; left: -12%;" data-800="width: 80%; height: 80%; top: 10%; left: 9%;"-->
+			<div id="map-canvas" data-0="width: 130%; height: 130%; top: -12%; left: -12%;" data-800="width: 90%; height: 90%; top: 6%; left: 6%;"></div>
+			<div id="back"></div>
+			<div id="contentSlide1">
+				<h1>Mijn gsmTijdlijn</h1>
+				<h2>2004 - 2014</h2>
+			</div>
+		</section>
+
+		<section id="slide-2" data-1800="left:-100%;" data-2600="left:0%;">
+			<img src="img/content/nokia5200.png"/>
+			<div id="content">
+				<h3>Nokia 5200</h3>
+				<p>lorem lipsumLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius augue sed efficitur ultrices.
+					hasellus commodo consectetur velit, sit amet condimentum neque maximus ac. Phasellus dapibus mauris nisi, a fermentum eros laoreet sed
+					. Pellentesque risus augue, ultrices eget bibendum in, maximus eget lacus. Morbi tincidunt, mi in euismod vulputate</p>
+			</div>
+			<h4 data-2600="opacity:0;" data-3000="opacity:1;">2006</h4>
+		</section>
+
+		<section id="slide-3" data-3600="left:100%;" data-4400="left:0%">
+		</section>
+
+		<section id="slide-4" data-5400="top:-100%;" data-6200="top:0%;">
+		</section>
+
+		<section id="slide-5" data-7200="top:100%;" data-8000="top:0%;">
+		</section>
+
+        <script src="js/vendor/jquery-1.9.1.min.js"></script>
+        <script src="js/imagesloaded.js"></script>
+        <script src="js/skrollr.js"></script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDu6sr4kPF5C0YXOW2Xv4zDT3SfRxwARcE"></script>
+        <script src="js/_main.js"></script>
+    </body>
+</html>
