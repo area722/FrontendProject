@@ -1,0 +1,135 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'favicon', '-g' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 verbose cache add [ 'favicon', null ]
+5 verbose cache add name=undefined spec="favicon" args=["favicon",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'favicon',
+6 verbose parsed url   path: 'favicon',
+6 verbose parsed url   href: 'favicon' }
+7 silly lockFile 2ba3a0d7-favicon favicon
+8 verbose lock favicon /Users/Wouter/.npm/2ba3a0d7-favicon.lock
+9 silly lockFile 2ba3a0d7-favicon favicon
+10 silly lockFile 2ba3a0d7-favicon favicon
+11 verbose addNamed [ 'favicon', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile 96e0539a-favicon favicon@
+14 verbose lock favicon@ /Users/Wouter/.npm/96e0539a-favicon.lock
+15 silly addNameRange { name: 'favicon', range: '*', hasData: false }
+16 verbose request where is /favicon
+17 verbose request registry https://registry.npmjs.org/
+18 verbose request id cff1ee81add43a2a
+19 verbose url raw /favicon
+20 verbose url resolving [ 'https://registry.npmjs.org/', './favicon' ]
+21 verbose url resolved https://registry.npmjs.org/favicon
+22 verbose request where is https://registry.npmjs.org/favicon
+23 info trying registry request attempt 1 at 14:02:26
+24 verbose etag "13COHRXCNR552SOGGA2HSSLGR"
+25 http GET https://registry.npmjs.org/favicon
+26 http 304 https://registry.npmjs.org/favicon
+27 silly registry.get cb [ 304,
+27 silly registry.get   { date: 'Sat, 22 Nov 2014 13:02:26 GMT',
+27 silly registry.get     server: 'Apache',
+27 silly registry.get     via: '1.1 varnish',
+27 silly registry.get     'last-modified': 'Sat, 22 Nov 2014 13:02:26 GMT',
+27 silly registry.get     'cache-control': 'max-age=60',
+27 silly registry.get     etag: '"13COHRXCNR552SOGGA2HSSLGR"',
+27 silly registry.get     age: '27',
+27 silly registry.get     'x-served-by': 'cache-ams4122-AMS',
+27 silly registry.get     'x-cache': 'HIT',
+27 silly registry.get     'x-cache-hits': '1',
+27 silly registry.get     'x-timer': 'S1416661346.155218,VS0,VE0',
+27 silly registry.get     vary: 'Accept',
+27 silly registry.get     'content-length': '0',
+27 silly registry.get     'keep-alive': 'timeout=10, max=50',
+27 silly registry.get     connection: 'Keep-Alive' } ]
+28 verbose etag https://registry.npmjs.org/favicon from cache
+29 silly addNameRange number 2 { name: 'favicon', range: '*', hasData: true }
+30 silly addNameRange versions [ 'favicon', [ '0.0.1', '0.0.2' ] ]
+31 verbose addNamed [ 'favicon', '0.0.2' ]
+32 verbose addNamed [ '0.0.2', '0.0.2' ]
+33 silly lockFile b63220bd-favicon-0-0-2 favicon@0.0.2
+34 verbose lock favicon@0.0.2 /Users/Wouter/.npm/b63220bd-favicon-0-0-2.lock
+35 silly lockFile b63220bd-favicon-0-0-2 favicon@0.0.2
+36 silly lockFile b63220bd-favicon-0-0-2 favicon@0.0.2
+37 silly lockFile 96e0539a-favicon favicon@
+38 silly lockFile 96e0539a-favicon favicon@
+39 silly resolved [ { name: 'favicon',
+39 silly resolved     version: '0.0.2',
+39 silly resolved     description: 'find the url of a web site\'s favicon image',
+39 silly resolved     keywords: [ 'favicon', 'icon', 'ico' ],
+39 silly resolved     homepage: 'https://github.com/sentientwaffle/favicon',
+39 silly resolved     bugs: { url: 'https://github.com/sentientwaffle/favicon/issues' },
+39 silly resolved     author:
+39 silly resolved      { name: 'sentientwaffle',
+39 silly resolved        url: 'http://sentientwaffle.github.com/' },
+39 silly resolved     main: './index',
+39 silly resolved     scripts: { test: 'mocha' },
+39 silly resolved     repository:
+39 silly resolved      { type: 'git',
+39 silly resolved        url: 'git://github.com/sentientwaffle/favicon.git' },
+39 silly resolved     dependencies: { request: '2.x.x' },
+39 silly resolved     devDependencies: { should: '0.x.x', mocha: '0.x.x' },
+39 silly resolved     engines: { node: '>=0.4.1' },
+39 silly resolved     _npmUser: { name: 'sentientwaffle', email: 'sentientwaffle@gmail.com' },
+39 silly resolved     _id: 'favicon@0.0.2',
+39 silly resolved     _engineSupported: true,
+39 silly resolved     _npmVersion: '1.0.106',
+39 silly resolved     _nodeVersion: 'v0.4.9',
+39 silly resolved     _defaultsLoaded: true,
+39 silly resolved     dist:
+39 silly resolved      { shasum: '5a650d1e6684d300822ea8fe1f1f2eefcb4d3f91',
+39 silly resolved        tarball: 'http://registry.npmjs.org/favicon/-/favicon-0.0.2.tgz' },
+39 silly resolved     maintainers: [ [Object] ],
+39 silly resolved     directories: {},
+39 silly resolved     _shasum: '5a650d1e6684d300822ea8fe1f1f2eefcb4d3f91',
+39 silly resolved     _from: 'favicon@',
+39 silly resolved     _resolved: 'https://registry.npmjs.org/favicon/-/favicon-0.0.2.tgz',
+39 silly resolved     readme: 'ERROR: No README data found!' } ]
+40 info install favicon@0.0.2 into /usr/local/lib
+41 info installOne favicon@0.0.2
+42 verbose lib/node_modules/favicon unbuild
+43 verbose tar unpack /Users/Wouter/.npm/favicon/0.0.2/package.tgz
+44 silly lockFile 48037651-r-local-lib-node-modules-favicon tar:///usr/local/lib/node_modules/favicon
+45 verbose lock tar:///usr/local/lib/node_modules/favicon /Users/Wouter/.npm/48037651-r-local-lib-node-modules-favicon.lock
+46 silly lockFile cc043240-er-npm-favicon-0-0-2-package-tgz tar:///Users/Wouter/.npm/favicon/0.0.2/package.tgz
+47 verbose lock tar:///Users/Wouter/.npm/favicon/0.0.2/package.tgz /Users/Wouter/.npm/cc043240-er-npm-favicon-0-0-2-package-tgz.lock
+48 silly gunzTarPerm modes [ '755', '644' ]
+49 error Error: EACCES, mkdir '/usr/local/lib/node_modules/favicon'
+49 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/favicon']
+49 error   errno: 3,
+49 error   code: 'EACCES',
+49 error   path: '/usr/local/lib/node_modules/favicon',
+49 error   fstream_type: 'Directory',
+49 error   fstream_path: '/usr/local/lib/node_modules/favicon',
+49 error   fstream_class: 'DirWriter',
+49 error   fstream_stack:
+49 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+49 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+49 error      'Object.oncomplete (fs.js:107:15)' ] }
+50 error Please try running this command again as root/Administrator.
+51 error System Darwin 14.0.0
+52 error command "node" "/usr/local/bin/npm" "install" "favicon" "-g"
+53 error cwd /Users/Wouter/OneDrive/3NMCT/Backend Development/Inhalen/Express
+54 error node -v v0.10.32
+55 error npm -v 1.4.28
+56 error path /usr/local/lib/node_modules/favicon
+57 error fstream_path /usr/local/lib/node_modules/favicon
+58 error fstream_type Directory
+59 error fstream_class DirWriter
+60 error code EACCES
+61 error errno 3
+62 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/favicon'
+63 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+63 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+63 error fstream_stack Object.oncomplete (fs.js:107:15)
+64 verbose exit [ 3, true ]
