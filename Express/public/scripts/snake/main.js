@@ -3,106 +3,98 @@
  */
 
 var socket = io.connect();
-var canvas = document.getElementById("snakeCanvas"),ctx = canvas.getContext("2d");
-var snakesArr = [];
-var step = 0.2;
-var food = new Food(0,"normal",Math.floor((Math.random() * canvas.width)+1),Math.floor((Math.random() * canvas.height)+1),"#0000FF");
-var control = "right";
+
+var canvas = $("#snakeCanvas")[0],ctx = canvas.getContext("2d"),w,h,celWidth = 10,snakesArr = [],food;
+//must be replaced
+var snake;
+var socketid = "";
+canvas.width = 500;
+canvas.height = 500;
+
 
 //sockets probeersel
 $("#snakePlay").on("click", function (e) {
     $("#snakeCanvas").show();
+    w = canvas.width;
+    h = canvas.height;
     socket.emit("play");
 });
 
 socket.on("ready", function (data) {
-    //snake toevoegen
-    var x = Math.floor((Math.random() * 100)+ 1),y = Math.floor((Math.random() * 100)+ 1),control;
-    //controls doorsturen
-    socket.emit("newSnakeClient",{x: x,y:y,canvasW: canvas.width,canvasH: canvas.height});
-    //waiting for other player
-    console.log("waiting for other player");
+    //Snake toevoegen
+    socketid = data;
+    snake = new Snake(data,5,[],50,10);
+    snake.create();
+
+    socket.emit("newSnake",{snake: snake,w:w,h:h,celWidth:celWidth});
+    console.log("waiting for other player")
 });
 
-socket.on("2Players", function (data) {
-    snakesArr = [];
-    $.each(data.snakes,function(i,val){
-        snakesArr.push(new Snake(val.color,val.id,3,val.x,val.y,3,"left"));
+socket.on("PlayersReady", function (data) {
+    $.each(data.snakes, function (i,val) {
+        snakesArr.push(new Snake(val.id,val.length,val.bodyArr,val.startX,val.startY));
     });
-    //food = new Food(0,"normal",data.food.x,data.food.y,data.food.c);
+    food = new Food(data.food.x,data.food.y);
+    animate();
 });
+
+
+function animate(){
+    ctx.clearRect(0,0,w,h);
+    $.each(snakesArr,function(i,val){
+        val.draw("red","white",w,h,food);
+    });
+    food.draw();
+    setTimeout(function () {
+        animate();
+    },100);
+}
 
 $(window).keydown(function(e){
     e.preventDefault();
-    switch (e.keyCode){
-        case 38:
-            control = "up";
-            break;
-        case 40:
-            control = "down";
-            break;
-        case 37:
-            control = "left";
-            break;
-        case 39:
-            control = "right";
-            break;
-        default:
-            control = "default"
-            break;
-    }
-});
-var prefControl = null;
-socket.on("serverControl", function (data) {
-    ctx.clearRect(0,0,canvas.width,canvas.height);
+    var key = e.keyCode;
     $.each(snakesArr, function (i,val) {
-        if(val.Id == data.id){
-            switch (data.control){
-                case "left":
-                    val.moveX(-step);
-                    val.Control = "left";
-                    break;
-                case "right":
-                    val.moveX(step);
-                    val.Control = "right";
-                    break;
-                case "down":
-                    val.moveY(-step);
-                    val.Control = "down";
-                    break;
-                case "up":
-                    val.moveY(step);
-                    val.Control = "up";
-                    break;
+        if(val.id == socketid){
+            if(key == "37" && val.direction != "right") {
+                socket.emit("control","left");
             }
-
-            //collision detection (food)
-            if(val.X < food.X + 3 && val.X + val.width > food.X && val.Y < food.Y + 3 && val.Y + 3 > food.Y){
-                console.log(data.id +" eet");
-                socket.emit("newFood",{canvasW: canvas.width,canvasH: canvas.height});
-                val.Eat();
+            else if(key == "38" && val.direction != "down"){
+                socket.emit("control","up");
+            }
+            else if(key == "39" && val.direction != "left") {
+                socket.emit("control","right");
+            }
+            else if(key == "40" && val.direction != "up") {
+                socket.emit("control","down");
             }
         }
-        val.draw(ctx);
     });
-    food.draw(ctx);
 });
 
-socket.on("newFoodServer", function (data) {
-    food = new Food(0,"normal",data.x,data.y,data.c);
+socket.on("serverControl", function (data) {
+    $.each(snakesArr, function (i,val) {
+        if(val.id == data.id && val.direction != data.control){
+            val.direction = data.control;
+        }
+    });
+});
+
+socket.on("newFood", function (data) {
+    food.x = data.x;
+    food.y = data.y;
+    $.each(snakesArr,function(i,val){
+        if(val.id == data.id){
+            val.tail = {x: val.nx, y: val.ny};
+            val.length++;
+        }
+    });
 });
 
 socket.on("disconnect",function(data){
-    ctx.clearRect(0,0,canvas.width,canvas.height);
     $.each(snakesArr,function(i,val){
-        if(val.Id == data.id){
+        if(val.id == data.id){
             snakesArr.splice(i,1);
         }
-        val.draw(ctx);
     });
 });
 
-(function animate(){
-    requestAnimationFrame(animate);
-    socket.emit("control",control);
-})();

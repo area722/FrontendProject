@@ -1,99 +1,94 @@
 /**
- * Created by Wouter on 22/11/14.
+ * Created by Wouter on 25/11/14.
  */
 
-var Snake = function(color,id,width,x,y,height,control){
-    this.color = color;
+var Snake = function (id,length,bodyArr,startX,startY) {
     this.id = id;
-    this.width = width;
-    this.x = x;
-    this.y = y;
-    this.body = [];
-    this.height = height;
-    this.control = control;
+    this.length = length;
+    this.bodyArr = bodyArr;
+    this.startX = startX;
+    this.startY = startY;
+    this.nx = 0;
+    this.ny = 0;
+    //var arr = ["up","left","down"]
+    this.direction = "left";
+        //arr[Math.floor(Math.random() * arr.length)];
+    this.tail = null;
 }
 
 Snake.prototype = {
-    get Color() {
-        return this.color;
+    create: function () {
+        for (var i = 0; i < this.length; i++) {
+            this.bodyArr.push({x: i + this.startX, y: 0 + this.startY});
+        }
     },
-    set Color(v) {
-        this.color = v;
+    draw: function (color, colorBorder, w, h, food) {
+        //The movement code for the snake to come here.
+        //The logic is simple
+        //Pop out the tail cell and place it infront of the head cell
+        this.nx = this.bodyArr[0].x;
+        this.ny = this.bodyArr[0].y;
+        //These were the position of the head cell.
+        //We will increment it to get the new head position
+        if (this.direction === "right") this.nx++;
+        else if (this.direction === "left") this.nx--;
+        else if (this.direction === "up") this.ny--;
+        else if (this.direction === "down") this.ny++;
+
+        this.checkEatSelf(w, h);
+
+        this.eat(food);
+
+        this.bodyArr.unshift(this.tail); //puts back the tail as the first cell
+
+        for (var i = 0; i < this.bodyArr.length; i++) {
+            var c = this.bodyArr[i];
+            //Lets paint 10px wide cells
+            ctx.fillStyle = color;
+            ctx.fillRect(c.x * celWidth, c.y * celWidth, celWidth, celWidth);
+            ctx.strokeStyle = colorBorder;
+            ctx.strokeRect(c.x * celWidth, c.y * celWidth, celWidth, celWidth);
+        }
     },
-    get Id(){
-        return this.id;
+    checkEatSelf: function (w, h) {
+        //left and right thew wall
+        if (this.nx <= -1) {
+            this.nx = w / celWidth;
+        }
+        else if (this.nx == w / celWidth) {
+            this.nx = -1;
+        }
+
+        if (this.ny <= -1) {
+            this.ny = h / celWidth;
+        }
+        else if (this.ny >= h / celWidth) {
+            this.ny = -1;
+        }
+
+        if (this.ckeckCollision()) {
+            console.log("ik eet mezelf op");
+        }
     },
-    set Id(v){
-        this.id = v;
-    },
-    get Width(){
-        return this.width;
-    },
-    set Width(v){
-        this.width = v;
-    },
-    get X(){
-        return this.x;
-    },
-    set X(v){
-        this.x = v;
-    },
-    get Y(){
-        return this.y;
-    },
-    set Y(v){
-        this.y = v;
-    },
-    get Height(){
-        return this.height;
-    },
-    set Height(v){
-        this.height = v;
-    },
-    get Body(){
-        return this.body;
-    },
-    set Body(v){
-        this.body = v;
-    },
-    set Control(v){
-        this.control = v;
-    },
-    get Control(){
-        return this.control;
-    },
-    moveX: function (step) {
-        var dit = this;
-        this.x += step;
-        $.each(this.body, function (i,val) {
-            val.x = dit.x;
-        });
-    },
-    moveY: function(step){
-        var dit = this;
-        this.y -= step;
-        $.each(this.body,function(i,val){
-            val.y = dit.y;
-        });
-    },
-    Eat: function () {
-        this.body.push({x: this.x+3,y:this.y,w: 3,h:3});
-        console.log("bodylength "+ this.body.length);
-    },
-    draw: function(ctx) {
-        var dit = this;
-        ctx.fillStyle = this.color;
-        ctx.fillRect(this.x, this.y, this.width, this.height);
-        $.each(this.body, function (i, val) {
-            val.x = dit.x;
-            val.y = dit.y;
-            if(dit.control == "left" || dit.control == "right")
-            {
-                ctx.fillRect(val.x + ((i+1)*3), val.y, val.w, val.h);
+    ckeckCollision: function () {
+        for (var i = 0; i < this.bodyArr.length; i++) {
+            if (this.bodyArr[i].x == this.nx && this.bodyArr[i].y == this.ny) {
+                return true;
             }
-            else{
-                ctx.fillRect(val.x, val.y + ((i+1)*3), val.w, val.h);
-            }
-        });
+        }
+        return false;
+    },
+    eat: function (food) {
+        if (this.nx == food.x && this.ny == food.y) {
+            this.tail = {x: this.nx, y: this.ny};
+            //create new food
+            this.length++;
+            socket.emit("newFood",{w:w,h:h,celWidth:celWidth});
+        }
+        else {
+            this.tail = this.bodyArr.pop(); //pops out the last cell
+            this.tail.x = this.nx;
+            this.tail.y = this.ny;
+        }
     }
-}
+};

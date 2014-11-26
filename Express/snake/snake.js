@@ -3,30 +3,28 @@
  */
 
 var snake = function (server) {
-    var snakesArrServer = [];
-    var io = require("socket.io").listen(server);
-    var color = require("randomcolor");
+    var snakesArrServer = [],io = require("socket.io").listen(server),color = require("randomcolor");
     io.sockets.on("connection", function (socket) {
+
         socket.on("play", function (data) {
-            socket.emit("ready");
+            socket.emit("ready",socket.id);
             console.log(socket.id + " wants to play");
         });
-        socket.on("newSnakeClient", function (data) {
-            data.id = socket.id;
-            data.color = color({luminosity: "random",hue: "random"});
-            snakesArrServer.push(data);
-            if(snakesArrServer.length >= 2){
-                io.sockets.emit("2Players",{snakes: snakesArrServer,food:{x: Math.floor((Math.random() * data.canvasW)+1),y:Math.floor((Math.random() * data.canvasH)+1),c: "#FF0000"}});
-            }
-        });
-        socket.on("control", function (data) {
-        if(data.control != "default"){
-                io.sockets.emit("serverControl",{id: socket.id,control: data});
+
+        socket.on("newSnake", function (data) {
+            snakesArrServer.push(data.snake);
+            if(snakesArrServer.length >=2){
+                io.sockets.emit("PlayersReady",{snakes: snakesArrServer,food: {x:Math.round(Math.random()*(data.w-data.celWidth)/data.celWidth),y:Math.round(Math.random()*(data.h-data.celWidth)/data.celWidth)}});
             }
         });
 
+        socket.on("control", function (data) {
+            io.sockets.emit("serverControl",{id: socket.id,control: data});
+        });
+
         socket.on("newFood",function(data){
-           io.sockets.emit("newFoodServer",{x: Math.floor((Math.random() * data.canvasW)+1),y:Math.floor((Math.random() * data.canvasH)+1),c: "#FF0000"});
+            //TODO aan andere laten weten dat hij opgegeten heeft
+           io.sockets.emit("newFood",{id:socket.id,x:Math.round(Math.random()*(data.w-data.celWidth)/data.celWidth),y:Math.round(Math.random()*(data.h-data.celWidth)/data.celWidth)});
         });
 
         socket.on("disconnect",function(data){
@@ -36,7 +34,7 @@ var snake = function (server) {
                     console.log(snakesArrServer.splice(i,1));
                 }
             });
-            io.sockets.emit("disconnect",{arr: snakesArrServer,id: socket.id});
+            io.sockets.emit("disconnect",{id: socket.id});
         });
     });
 }
