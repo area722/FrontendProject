@@ -11,6 +11,18 @@ body, html {
   height: 100%;
   min-height: 100%;
   background-color: $greyBack;
+  color: #ffffff;
+}
+
+h3{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 50px;
+}
+
+h4{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 45px;
+  display:none;
 }
 
 /* SNAKE */
@@ -63,7 +75,6 @@ body, html {
     right: 0;
     top:30%;
     text-align: center;
-    color: #ffffff;
   }
 
   h1{
@@ -99,20 +110,10 @@ body, html {
   }
 
   h3{
-    font-family: 'Montserrat', sans-serif;
-    color: #ffffff;
-    font-size: 50px;
     margin-bottom: 15px;
   }
 
-  p{
-    color: #ffffff;
-  }
-
   h4{
-    font-family: 'Montserrat', sans-serif;
-    color: #ffffff;
-    font-size: 45px;
     margin-left: auto;
     margin-right: auto;
     right:0;
@@ -125,17 +126,74 @@ body, html {
 
 //slide 3
 #slide-3{
-  background-image:url('../img/style/backgrounds/img_earth2.jpg');
+  background-color: #2f323b;
+
+  img{
+    position: fixed;
+    margin-top: 24%;
+    margin-left: 56%;
+    width: 40%;
+    height: auto;
+  }
+
+  #content{
+    margin-top: 10%;
+    margin-left: 15%;
+    width: 450px;
+
+    h3{
+      margin-bottom: 5px;
+    }
+  }
+
 }
 
 //slide 4
 #slide-4{
-  background-image:url('../img/style/backgrounds/nexus-5-india-launch-635.jpg');
+  background-color: #5d6770;
+
+  img{
+    float: left;
+    width: 23%;
+    height: auto;
+    margin-top: 5%;
+    margin-left: 23%;
+  }
+
+  #content{
+    float: left;
+    width: 450px;
+    margin-left: 3%;
+    margin-top: 2%;
+
+    h3{
+      margin-bottom: 5px;
+    }
+  }
 }
 
 //slide 5
 #slide-5{
-    background-image:url('../img/style/backgrounds/img_road.jpg');
+  background-color: #452537;
+
+  #content{
+    float: left;
+    width: 450px;
+    margin-left: 17%;
+    margin-top: 7%;
+
+    h3{
+      margin-bottom: 5px;
+    }
+  }
+
+  img{
+    float: left;
+    width: 37%;
+    height: auto;
+    margin-top: 8%;
+    margin-left: 6%;
+  }
 }
 
 /* progressbar */
