@@ -62,7 +62,6 @@ body, html {
   top: 50%; }
 
 #slide-2 {
-  left: -200%;
   background: radial-gradient(#7c87a7, #425380); }
   #slide-2 img {
     float: left;
@@ -83,7 +82,14 @@ body, html {
   #slide-2 h4 {
     font-family: 'Montserrat', sans-serif;
     color: #ffffff;
-    font-size: 45px; }
+    font-size: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    left: 0;
+    text-align: center;
+    position: fixed;
+    top: 83%; }
 
 #slide-3 {
   background-image: url("../img/style/backgrounds/img_earth2.jpg"); }
@@ -103,9 +109,10 @@ body, html {
   position: fixed;
   z-index: 2; }
 
-@media all and (max-width: 1060px) {
-  #slide-2 {
-    background: #000000; } }
+@media all and (max-width: 1065px) {
+  #slide-2 img {
+    margin-left: 10%;
+    margin-top: 10%; } }
 @media all and (max-width: 1020px) {
   #slide-1 h1, #slide-1 h2 {
     top: 30%; }
@@ -114,6 +121,17 @@ body, html {
   #slide-1 h2 {
     font-size: 50px;
     top: 45%; } }
+@media all and (max-width: 960px) {
+  #slide-2 img {
+    margin-left: 11%;
+    margin-top: 13%;
+    width: 30%;
+    height: auto; }
+  #slide-2 #content {
+    width: 400px; } }
+@media all and (max-width: 830px) {
+  #slide-2 img {
+    margin-left: 3%; } }
 @media all and (max-width: 750px) {
   #slide-1 h1, #slide-1 h2 {
     top: 30%; }
@@ -121,7 +139,10 @@ body, html {
     font-size: 72px; }
   #slide-1 h2 {
     font-size: 40px;
-    top: 43%; } }
+    top: 43%; }
+
+  #slide-2 #content {
+    width: 300px; } }
 @media all and (max-width: 670px) {
   #slide-1 h1, #slide-1 h2 {
     top: 30%; }
@@ -129,7 +150,18 @@ body, html {
     font-size: 62px; }
   #slide-1 h2 {
     font-size: 30px;
-    top: 43%; } }
+    top: 43%; }
+
+  #slide-2 img {
+    width: 26%;
+    height: auto; }
+  #slide-2 h3 {
+    margin-top: 55px;
+    font-size: 34px; }
+  #slide-2 #content {
+    width: 250px; }
+  #slide-2 p {
+    font-size: 14px; } }
 @media all and (max-width: 580px) {
   #slide-1 h1, #slide-1 h2 {
     top: 30%; }
@@ -138,13 +170,54 @@ body, html {
   #slide-1 h2 {
     font-size: 20px;
     top: 40%; } }
-@media all and (max-height: 600px) {
+@media screen and (min-height: 1000px) {
+  #slide-2 img {
+    float: none;
+    width: 40%;
+    height: auto;
+    margin-left: 30%;
+    margin-top: 6%; }
+  #slide-2 #content {
+    width: 95%;
+    margin-top: 6%;
+    float: none; }
+    #slide-2 #content h3 {
+      margin-left: 30%;
+      font-size: 75px; }
+    #slide-2 #content p {
+      text-align: center;
+      font-size: 45px; }
+    #slide-2 #content #snakePlay {
+      display: none; }
+  #slide-2 h4 {
+    display: none; } }
+@media screen and (max-device-height: 600px) and (max-device-width: 1065px) {
   #slide-1 h1, #slide-1 h2 {
     top: 30%; }
   #slide-1 h1 {
     font-size: 72px; }
   #slide-1 h2 {
     font-size: 40px;
-    top: 55%; } }
+    top: 55%; }
+
+  #slide-2 img {
+    width: 25%;
+    height: auto;
+    margin-left: 10%;
+    margin-top: 4%; }
+  #slide-2 #content {
+    width: 500px;
+    margin-top: 4%; }
+    #slide-2 #content h3 {
+      margin-top: 0;
+      font-size: 60px;
+      margin-bottom: 0px; }
+    #slide-2 #content p {
+      margin-top: 0px;
+      font-size: 25px; }
+    #slide-2 #content #snakePlay {
+      display: none; }
+  #slide-2 h4 {
+    display: none; } }
 
 /*# sourceMappingURL=screen.css.map */
