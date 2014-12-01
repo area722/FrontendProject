@@ -49,7 +49,11 @@
 }
 
 @-skrollr-keyframes slide2Anim {
+    0{
+        display:none;
+    }
     1800{
+        display: block;
         left:-100%;
     }
     2600{

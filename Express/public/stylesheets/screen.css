@@ -62,7 +62,7 @@ body, html {
   top: 50%; }
 
 #slide-2 {
-  background-color: #425380;
+  left: -200%;
   background: radial-gradient(#7c87a7, #425380); }
   #slide-2 img {
     float: left;
@@ -102,5 +102,49 @@ body, html {
   height: 10px;
   position: fixed;
   z-index: 2; }
+
+@media all and (max-width: 1060px) {
+  #slide-2 {
+    background: #000000; } }
+@media all and (max-width: 1020px) {
+  #slide-1 h1, #slide-1 h2 {
+    top: 30%; }
+  #slide-1 h1 {
+    font-size: 82px; }
+  #slide-1 h2 {
+    font-size: 50px;
+    top: 45%; } }
+@media all and (max-width: 750px) {
+  #slide-1 h1, #slide-1 h2 {
+    top: 30%; }
+  #slide-1 h1 {
+    font-size: 72px; }
+  #slide-1 h2 {
+    font-size: 40px;
+    top: 43%; } }
+@media all and (max-width: 670px) {
+  #slide-1 h1, #slide-1 h2 {
+    top: 30%; }
+  #slide-1 h1 {
+    font-size: 62px; }
+  #slide-1 h2 {
+    font-size: 30px;
+    top: 43%; } }
+@media all and (max-width: 580px) {
+  #slide-1 h1, #slide-1 h2 {
+    top: 30%; }
+  #slide-1 h1 {
+    font-size: 40px; }
+  #slide-1 h2 {
+    font-size: 20px;
+    top: 40%; } }
+@media all and (max-height: 600px) {
+  #slide-1 h1, #slide-1 h2 {
+    top: 30%; }
+  #slide-1 h1 {
+    font-size: 72px; }
+  #slide-1 h2 {
+    font-size: 40px;
+    top: 55%; } }
 
 /*# sourceMappingURL=screen.css.map */
