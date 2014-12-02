@@ -51,8 +51,10 @@ function animate(){
 }
 
 $(window).keydown(function(e){
-    e.preventDefault();
     var key = e.keyCode;
+    if(key == "37" && key == "38" && key == "39" && key == "40"){
+        e.preventDefault();
+    }
     $.each(snakesArr, function (i,val) {
         if(val.id == socketid){
             if(key == "37" && val.direction != "right") {

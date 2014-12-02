@@ -3,6 +3,7 @@
  */
 
 (function getLocation() {
+    var pos = {coords:{latitude:21.344507,longitude:-157.974891}};
     var nav = null;
     if (nav == null) {
         nav = window.navigator;
@@ -13,7 +14,6 @@
             geoloc.getCurrentPosition(showPosition, error);
         }
         else {
-            var pos = {coords:{latitude:-13,longitude:130}};
             initialize(pos);
             console.log("Geolocation not supported");
         }
@@ -23,7 +23,6 @@
     }
 
     function showPosition(pos){
-        console.log(pos);
         initialize(pos);
     }
     function error(error){
@@ -52,6 +51,7 @@
             "an unknown error (Code: " + strErrorCode + ").";
         }
         console.log(message);
+        initialize(pos);
     }
 })();
 
