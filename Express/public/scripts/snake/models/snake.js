@@ -47,6 +47,7 @@ Snake.prototype = {
             ctx.fillStyle = color;
             ctx.fillRect(c.x * celWidth, c.y * celWidth, celWidth, celWidth);
             ctx.strokeStyle = colorBorder;
+            ctx.lineWidth = 1;
             ctx.strokeRect(c.x * celWidth, c.y * celWidth, celWidth, celWidth);
         }
     },

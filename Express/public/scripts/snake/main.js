@@ -8,8 +8,8 @@ var canvas = $("#snakeCanvas")[0],ctx = canvas.getContext("2d"),w,h,celWidth = 1
 //must be replaced
 var snake;
 var socketid = "";
-canvas.width = 500;
-canvas.height = 500;
+canvas.width = 1000;
+canvas.height = 700;
 
 
 //sockets probeersel
@@ -43,6 +43,9 @@ function animate(){
     //draw background
     ctx.fillStyle = "#608a36";
     ctx.fillRect(0,0,w,h);
+    ctx.lineWidth = 11;
+    ctx.strokeStyle = "#1f2c13";
+    ctx.strokeRect(0,0,w,h);
 
     $.each(snakesArr,function(i,val){
         val.draw("#1f2c13","white",w,h,food);
