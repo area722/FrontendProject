@@ -31,8 +31,9 @@ socket.on("ready", function (data) {
 });
 
 socket.on("PlayersReady", function (data) {
-    $.each(data.snakes, function (i,val) {
-        snakesArr.push(new Snake(val.id,val.length,val.bodyArr,val.startX,val.startY));
+    snakesArr = data.snakes;
+    $.each(snakesArr, function (i,val) {
+        val.__proto__ = snake.__proto__;
     });
     food = new Food(data.food.x,data.food.y);
     animate();
