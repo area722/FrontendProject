@@ -40,9 +40,12 @@ socket.on("PlayersReady", function (data) {
 
 
 function animate(){
-    ctx.clearRect(0,0,w,h);
+    //draw background
+    ctx.fillStyle = "#608a36";
+    ctx.fillRect(0,0,w,h);
+
     $.each(snakesArr,function(i,val){
-        val.draw("red","white",w,h,food);
+        val.draw("#1f2c13","white",w,h,food);
     });
     food.draw();
     setTimeout(function () {
@@ -52,25 +55,25 @@ function animate(){
 
 $(window).keydown(function(e){
     var key = e.keyCode;
-    if(key == "37" && key == "38" && key == "39" && key == "40"){
+    if(key >= "37" && key <= "40"){
         e.preventDefault();
+        $.each(snakesArr, function (i,val) {
+            if(val.id == socketid){
+                if(key == "37" && val.direction != "right") {
+                    socket.emit("control","left");
+                }
+                else if(key == "38" && val.direction != "down"){
+                    socket.emit("control","up");
+                }
+                else if(key == "39" && val.direction != "left") {
+                    socket.emit("control","right");
+                }
+                else if(key == "40" && val.direction != "up") {
+                    socket.emit("control","down");
+                }
+            }
+        });
     }
-    $.each(snakesArr, function (i,val) {
-        if(val.id == socketid){
-            if(key == "37" && val.direction != "right") {
-                socket.emit("control","left");
-            }
-            else if(key == "38" && val.direction != "down"){
-                socket.emit("control","up");
-            }
-            else if(key == "39" && val.direction != "left") {
-                socket.emit("control","right");
-            }
-            else if(key == "40" && val.direction != "up") {
-                socket.emit("control","down");
-            }
-        }
-    });
 });
 
 socket.on("serverControl", function (data) {
