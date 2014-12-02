@@ -2,21 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31ef1836-af75-4435-a664-86693e94c710" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Assets/3.pat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Assets/3.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Assets/57038df2d94b75983174e0be7a8c21b6-fullsize.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Assets/Nokia_3510i_01__87173_zoom.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Assets/montserrat.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Assets/montserrat/Montserrat-Black.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Assets/montserrat/Montserrat-Bold.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Assets/montserrat/Montserrat-Hairline.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Assets/montserrat/Montserrat-Light.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Assets/montserrat/Montserrat-Regular.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Assets/montserrat/SIL Open Font License.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Assets/pattern.ai" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Assets/pic1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Assets/psd/nokia 5200-closed.psd" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/snake/main.js" afterPath="$PROJECT_DIR$/public/scripts/snake/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Express.iws" />
@@ -337,7 +322,13 @@
       <option name="project" value="LOCAL" />
       <updated>1417513838693</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="snake style adjusted">
+      <created>1417515218966</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1417515218966</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -404,7 +395,8 @@
     <MESSAGE value="homepage mobile support :)" />
     <MESSAGE value="page 2 mobile support - responsive" />
     <MESSAGE value="navigator location deny support" />
-    <option name="LAST_COMMIT_MESSAGE" value="navigator location deny support" />
+    <MESSAGE value="snake style adjusted" />
+    <option name="LAST_COMMIT_MESSAGE" value="snake style adjusted" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
