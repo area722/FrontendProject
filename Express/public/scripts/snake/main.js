@@ -5,12 +5,10 @@
 var socket = io.connect();
 
 var canvas = $("#snakeCanvas")[0],ctx = canvas.getContext("2d"),w,h,celWidth = 10,snakesArr = [],food;
-//must be replaced
 var snake;
 var socketid = "";
 canvas.width = 1000;
 canvas.height = 700;
-
 
 //sockets probeersel
 $("#snakePlay").on("click", function (e) {
@@ -31,8 +29,9 @@ socket.on("ready", function (data) {
 });
 
 socket.on("PlayersReady", function (data) {
-    $.each(data.snakes, function (i,val) {
-        snakesArr.push(new Snake(val.id,val.length,val.bodyArr,val.startX,val.startY));
+    snakesArr = data.snakes;
+    $.each(snakesArr, function (i,val) {
+        val.__proto__ = snake.__proto__;
     });
     food = new Food(data.food.x,data.food.y);
     animate();
@@ -51,6 +50,7 @@ function animate(){
         val.draw("#1f2c13","white",w,h,food);
     });
     food.draw();
+
     setTimeout(function () {
         animate();
     },100);
@@ -58,21 +58,21 @@ function animate(){
 
 $(window).keydown(function(e){
     var key = e.keyCode;
-    if(key >= "37" && key <= "40"){
+    if(key >= 37 && key <= 40){
         e.preventDefault();
         $.each(snakesArr, function (i,val) {
             if(val.id == socketid){
-                if(key == "37" && val.direction != "right") {
-                    socket.emit("control","left");
+                if(key === 37 && val.direction !== "right") {
+                    socket.emit("control",{d:"left",x:val.nx, y:val.ny});
                 }
-                else if(key == "38" && val.direction != "down"){
-                    socket.emit("control","up");
+                else if(key === 38 && val.direction !== "down"){
+                    socket.emit("control",{d:"up",x:val.nx, y:val.ny});
                 }
-                else if(key == "39" && val.direction != "left") {
-                    socket.emit("control","right");
+                else if(key === 39 && val.direction !== "left") {
+                    socket.emit("control",{d:"right",x:val.nx, y:val.ny});
                 }
-                else if(key == "40" && val.direction != "up") {
-                    socket.emit("control","down");
+                else if(key === 40 && val.direction !== "up") {
+                    socket.emit("control",{d:"down",x:val.nx, y:val.ny});
                 }
             }
         });
@@ -81,8 +81,10 @@ $(window).keydown(function(e){
 
 socket.on("serverControl", function (data) {
     $.each(snakesArr, function (i,val) {
-        if(val.id == data.id && val.direction != data.control){
-            val.direction = data.control;
+        if(val.id === data.id && val.direction != data.control.d){
+            val.direction = data.control.d;
+            val.nx = data.control.x;
+            val.ny = data.control.y;
         }
     });
 });
@@ -91,7 +93,7 @@ socket.on("newFood", function (data) {
     food.x = data.x;
     food.y = data.y;
     $.each(snakesArr,function(i,val){
-        if(val.id == data.id){
+        if(val.id === data.id){
             val.tail = {x: val.nx, y: val.ny};
             val.length++;
         }
@@ -100,7 +102,7 @@ socket.on("newFood", function (data) {
 
 socket.on("disconnect",function(data){
     $.each(snakesArr,function(i,val){
-        if(val.id == data.id){
+        if(val.id === data.id){
             snakesArr.splice(i,1);
         }
     });
