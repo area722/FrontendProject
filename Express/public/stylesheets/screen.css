@@ -121,8 +121,63 @@ h4 {
     margin-top: 2%; }
     #slide-4 #content h3 {
       margin-bottom: 5px; }
-  #slide-4 input, #slide-4 button, #slide-4 select {
+  #slide-4 input, #slide-4 button, #slide-4 select, #slide-4 option[value="none"] {
     display: none; }
+  #slide-4 #chat {
+    background-image: url("../img/content/Iphone.png");
+    float: left;
+    height: 81%;
+    width: 23%;
+    margin-top: 5%;
+    margin-left: 23%;
+    background-size: cover;
+    background-color: #5c5b5b; }
+    #slide-4 #chat #rooms {
+      background-color: #aaaaaa;
+      width: 85%;
+      height: 9%;
+      margin-left: 8%;
+      margin-top: 34%;
+      padding: 1px; }
+      #slide-4 #chat #rooms p {
+        font-size: 17px;
+        text-align: center; }
+      #slide-4 #chat #rooms select {
+        margin-top: 14px;
+        margin-left: 36px;
+        background-color: #aaaaaa;
+        color: #ffffff;
+        font-family: 'Montserrat', sans-serif; }
+      #slide-4 #chat #rooms select option {
+        font-size: 20px; }
+    #slide-4 #chat #messages {
+      height: 49%;
+      overflow: hidden; }
+      #slide-4 #chat #messages .messageLeft, #slide-4 #chat #messages .messageRight {
+        width: 55%;
+        padding-left: 17px;
+        padding-right: 17px;
+        background: linear-gradient(to bottom, #9f9e9e, #636363); }
+      #slide-4 #chat #messages .message {
+        padding-top: 6px;
+        padding-bottom: 0px; }
+      #slide-4 #chat #messages .userTime {
+        font-size: 10px;
+        color: #abaaaa;
+        padding-bottom: 6px; }
+      #slide-4 #chat #messages .messageLeft {
+        margin-left: 12%;
+        text-align: left; }
+      #slide-4 #chat #messages .messageRight {
+        margin-left: 24%;
+        text-align: right; }
+    #slide-4 #chat #input {
+      margin-left: 8%;
+      padding-top: 13px;
+      padding-bottom: 13px;
+      padding-left: 11px;
+      width: 82%;
+      background-color: #b0b0b0; }
 
 #slide-5 {
   background-color: #452537; }

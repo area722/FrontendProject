@@ -171,8 +171,85 @@ h4{
   }
 
   //chat
-  input, button,select{
+  input, button,select,option[value="none"]{
     display: none;
+  }
+
+  #chat{
+    background-image: url("../img/content/Iphone.png");
+    float: left;
+    height: 81%;
+    width: 23%;
+    margin-top: 5%;
+    margin-left: 23%;
+    background-size: cover;
+    background-color: #5c5b5b;
+
+    #rooms{
+      background-color: #aaaaaa;
+      width:85%;
+      height: 9%;
+      margin-left: 8%;
+      margin-top: 34%;
+      padding: 1px;
+
+      p{
+        font-size: 17px;
+        text-align: center;
+      }
+
+      select{
+        margin-top: 14px;
+        margin-left: 36px;
+        background-color: #aaaaaa;
+        color: #ffffff;
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      select option{
+        font-size: 20px;
+      }
+    }
+
+    #messages{
+      height: 49%;
+      .messageLeft,.messageRight{
+        width: 55%;
+        padding-left: 17px;
+        padding-right: 17px;
+        background: linear-gradient(to bottom,#9f9e9e,#636363);
+      }
+
+      .message{
+        padding-top: 6px;
+        padding-bottom: 0px;
+      }
+      .userTime{
+        font-size: 10px;
+        color: #abaaaa;
+        padding-bottom: 6px;
+      }
+
+      .messageLeft{
+        margin-left: 12%;
+        text-align: left;
+      }
+      .messageRight{
+        margin-left: 24%;
+        text-align: right;
+      }
+      overflow: hidden;
+    }
+
+    #input{
+      margin-left: 8%;
+      padding-top: 13px;
+      padding-bottom: 13px;
+      padding-left: 11px;
+      width: 82%;
+      background-color: #b0b0b0;
+    }
+
   }
 }
 
