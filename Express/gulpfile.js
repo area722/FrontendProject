@@ -3,6 +3,7 @@
  */
 
 var gulp = require("gulp"),
+    stripDebug = require('gulp-strip-debug'),
     minifycss = require('gulp-minify-css'),
     imagemin = require('gulp-imagemin'),
     uglify = require("gulp-uglify"),
@@ -18,6 +19,7 @@ gulp.task('clean', function(cb) {
 
 gulp.task('js', function () {
     return gulp.src(['public/scripts/**/*.js','!public/scripts/lib/**/*.js'])
+        .pipe(stripDebug())
         .pipe(jshint())
         .pipe(jshint.reporter('default'))
         .pipe(concat('app.js'))

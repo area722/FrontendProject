@@ -13,13 +13,19 @@ block content
 
    //Slide2
    div(class="slide",id="slide-2")
-      img(src="/img/content/nokia5200.png")
+      img(src="/img/content/nokia5200.png",id="nokiaImg")
       div(id="content")
          h3 Nokia 5200
          p lorem lipsumLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius augue sed efficitur ultrices. hasellus commodo consectetur velit, sit amet condimentum neque maximus ac. Phasellus dapibus mauris nisi, a fermentum eros laoreet sed. Pellentesque risus augue, ultrices eget bibendum in, maximus eget lacus. Morbi tincidunt, mi in euismod vulputate
          p(id="snakePlay") play snake
       h4 2006
-      canvas(id="snakeCanvas")
+      div(id="snakeDiv")
+         div(id="infoSnake")
+            div(id="operator")
+               img(src="/img/content/operator.png")
+            div(id="numplayers")
+               p 3 Players
+         canvas(id="snakeCanvas")
 
    //Slide3
    div(class="slide",id="slide-3")

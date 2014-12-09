@@ -18,14 +18,6 @@ h4 {
   font-family: 'Montserrat', sans-serif;
   font-size: 45px; }
 
-/* SNAKE */
-#snakeCanvas {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 1;
-  display: none; }
-
 /* SLIDES */
 .slide {
   min-width: 960px;
@@ -71,7 +63,7 @@ h4 {
 
 #slide-2 {
   background: radial-gradient(#7c87a7, #425380); }
-  #slide-2 img {
+  #slide-2 #nokiaImg {
     float: left;
     margin-left: 20%;
     margin-top: 10%; }
@@ -90,6 +82,28 @@ h4 {
     text-align: center;
     position: fixed;
     top: 83%; }
+  #slide-2 #snakeDiv {
+    position: absolute;
+    background-color: #608a36;
+    left: 18%;
+    top: 3%;
+    padding: 1%;
+    display: none; }
+    #slide-2 #snakeDiv #operator {
+      float: left; }
+      #slide-2 #snakeDiv #operator img {
+        width: 70%;
+        height: auto; }
+    #slide-2 #snakeDiv #numplayers {
+      padding: 0;
+      float: right;
+      color: #1f2c13;
+      font-size: 36px; }
+      #slide-2 #snakeDiv #numplayers p {
+        margin: 0;
+        margin-bottom: 4px; }
+    #slide-2 #snakeDiv #snakeCanvas {
+      clear: both; }
 
 #slide-3 {
   background-color: #2f323b; }

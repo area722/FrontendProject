@@ -24,15 +24,6 @@ h4{
   font-size: 45px;
 }
 
-/* SNAKE */
-#snakeCanvas{
-  position: absolute;
-  left: 0;
-  top:0;
-  z-index: 1;
-  display: none;
-}
-
 /* SLIDES */
 .slide{
   min-width: 960px;
@@ -95,7 +86,7 @@ h4{
 #slide-2{
   background: radial-gradient(#7c87a7, #425380);
 
-  img{
+  #nokiaImg{
     float: left;
     margin-left: 20%;
     margin-top: 10%
@@ -120,6 +111,39 @@ h4{
     text-align: center;
     position: fixed;
     top: 83%;
+  }
+
+  //snake
+  #snakeDiv{
+    position: absolute;
+    background-color: #608a36;
+    left:18%;
+    top:3%;
+    padding:1%;
+    display: none;
+
+    #operator{
+      float: left;
+      img{
+        width: 70%;
+        height: auto;
+      }
+    }
+
+    #numplayers{
+      padding:0;
+      float: right;
+      color: #1f2c13;
+      font-size: 36px;
+      p{
+        margin:0;
+        margin-bottom: 4px;
+      }
+    }
+
+    #snakeCanvas{
+      clear: both;
+    }
   }
 }
 

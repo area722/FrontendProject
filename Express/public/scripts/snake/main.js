@@ -7,12 +7,12 @@ var socket = io.connect();
 var canvas = $("#snakeCanvas")[0],ctx = canvas.getContext("2d"),w,h,celWidth = 10,snakesArr = [],food;
 var snake;
 var socketid = "";
-canvas.width = 1000;
-canvas.height = 700;
+canvas.width = 900;
+canvas.height = 650;
 
 //sockets probeersel
 $("#snakePlay").on("click", function (e) {
-    $("#snakeCanvas").show();
+    $("#snakeDiv").show();
     w = canvas.width;
     h = canvas.height;
     socket.emit("play");
@@ -31,7 +31,7 @@ socket.on("ready", function (data) {
 socket.on("PlayersReady", function (data) {
     snakesArr = data.snakes;
     $.each(snakesArr, function (i,val) {
-        val.prototype = snake.prototype;
+        val.__proto__ = (Object.getPrototypeOf(snake));
     });
     food = new Food(data.food.x,data.food.y);
     animate();

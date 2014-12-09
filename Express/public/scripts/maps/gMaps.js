@@ -77,9 +77,10 @@ function initialize(pos) {
         map: map,
         animation: google.maps.Animation.DROP
     });
+
+    google.maps.event.addDomListener(window, 'scroll', function() {
+        google.maps.event.trigger(mapGlobal, "resize");
+        mapGlobal.setCenter(posGlobal);
+    });
 }
 
-google.maps.event.addDomListener(window, 'scroll', function() {
-    google.maps.event.trigger(mapGlobal, "resize");
-    mapGlobal.setCenter(posGlobal);
-});
