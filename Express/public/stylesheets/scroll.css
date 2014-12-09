@@ -1,0 +1,118 @@
+/*slide 1*/
+#slide-1{
+    -skrollr-animation-name:slide1Anim;
+}
+@-skrollr-keyframes slide1Anim{
+    0{
+        top:-28%;
+        left: -28%;
+    }
+    800{
+        top:0%;
+        left: 0%;
+    }
+}
+
+#map-canvas{
+    -skrollr-animation-name: mapAnimation;
+}
+
+@-skrollr-keyframes mapAnimation{
+    0{
+        width:150%;
+        height:150%;
+    }
+    800{
+        width:100%;
+        height:100%;
+    }
+}
+
+#back{
+    -skrollr-animation-name: nexusAnimation;
+}
+
+@-skrollr-keyframes nexusAnimation{
+    0{
+        width: 156%;
+        height: 156%;
+    }
+    800{
+        width:100%;
+        height:100%;
+    }
+}
+
+/*slide 2*/
+#slide-2{
+    -skrollr-animation-name: slide2Anim;
+}
+
+@-skrollr-keyframes slide2Anim {
+    0{
+        display:none;
+    }
+    1800{
+        display: block;
+        left:-100%;
+    }
+    2600{
+        left:0%;
+    }
+}
+
+#slide-2 h4{
+    -skrollr-animation-name: datumSlide2Anim;
+}
+
+@-skrollr-keyframes datumSlide2Anim {
+    2600{
+        opacity:0;
+    }
+    3000{
+        opacity:1;
+    }
+}
+
+/*slide 3*/
+#slide-3{
+    -skrollr-animation-name: slide3Anim;
+}
+
+@-skrollr-keyframes slide3Anim {
+    3600{
+        left:100%
+    }
+    4400{
+        left: 0%;
+    }
+}
+
+/*slide 4*/
+#slide-4{
+    -skrollr-animation-name: slide4Anim;
+}
+
+@-skrollr-keyframes slide4Anim {
+    5400{
+        top:-100%;
+    }
+    6200{
+        top:0%;
+    }
+}
+
+/*slide 5*/
+#slide-5{
+    -skrollr-animation-name: slide5Anim;
+}
+/*data-7200="top:100%;",data-8000="top:0%;"*/
+@-skrollr-keyframes slide5Anim {
+    7200{
+        top:100%;
+    }
+    8000{
+        top:0%;
+    }
+}
+

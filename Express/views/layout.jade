@@ -1,0 +1,33 @@
+//
+   Created by Wouter on 22/11/14.
+
+doctype html
+html
+   head
+      title= title
+      link(rel='stylesheet',href='http://fonts.googleapis.com/css?family=Montserrat')
+      link(rel='stylesheet',href='/stylesheets/normalize.css')
+      link(rel='stylesheet',href='/stylesheets/screen.css')
+      <link rel="stylesheet" type="text/css" href="stylesheets/scroll.css" data-skrollr-stylesheet />
+   body
+      block content
+      //jquery
+      script(src='/scripts/lib/jquery-2.1.1.min.js')
+      //preloader
+      script(src='/scripts/lib/queryloader2.min.js')
+      //node socketsio
+      script(src='/scripts/lib/socket.io.js')
+      //google maps
+      script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDu6sr4kPF5C0YXOW2Xv4zDT3SfRxwARcE')
+      script(src='/scripts/maps/gMaps.js')
+      //scroll library
+      script(src='/scripts/lib/skrollr.stylesheets.min.js')
+      script(src='/scripts/lib/skrollr.js')
+      //main
+      script(src='/scripts/main.js')
+      //snake
+      script(src='/scripts/snake/models/snake.js')
+      script(src='/scripts/snake/models/food.js')
+      script(src='/scripts/snake/main.js')
+      //chat
+      script(src='/scripts/chat/main.js')
