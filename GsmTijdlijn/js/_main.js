@@ -24,6 +24,7 @@ skrollr.init({
 	}
 
 	function showPosition(pos){
+		console.log(pos);
 		initialize(pos);
 	}
 	function error(error){
