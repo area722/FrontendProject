@@ -13,6 +13,7 @@ canvas.height = 650;
 //sockets probeersel
 $("#snakePlay").on("click", function (e) {
     $("#snakeDiv").show();
+    $("#date").hide();
     w = canvas.width;
     h = canvas.height;
     socket.emit("play");
@@ -29,9 +30,11 @@ socket.on("ready", function (data) {
 });
 
 socket.on("PlayersReady", function (data) {
+    $("#waiting").hide();
     snakesArr = data.snakes;
+    $("#numplayers").text(snakesArr.length+" players");
     $.each(snakesArr, function (i,val) {
-        val.__proto__ = (Object.getPrototypeOf(snake));
+        val.__proto__ = Object.getPrototypeOf(snake);
     });
     food = new Food(data.food.x,data.food.y);
     animate();

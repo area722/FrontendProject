@@ -10,9 +10,8 @@ var Snake = function (id,length,bodyArr,startX,startY) {
     this.startY = startY;
     this.nx = 0;
     this.ny = 0;
-    //var arr = ["up","left","down"]
-    this.direction = "left";
-        //arr[Math.floor(Math.random() * arr.length)];
+    var arr = ["up","left","down"];
+    this.direction = arr[Math.floor(Math.random() * arr.length)];
     this.tail = null;
 };
 

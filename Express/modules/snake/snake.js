@@ -31,7 +31,7 @@ var snake = function (io) {
         });
 
         socket.on("disconnect",function(data){
-            console.log("disconnect "+socket.id)
+            console.log("disconnect "+socket.id);
             snakesArrServer.forEach(function (item,i) {
                 if(item.id === socket.id){
                     console.log(snakesArrServer.splice(i,1));

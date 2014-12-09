@@ -29,6 +29,6 @@ var chat = function(io){
             }
         });
     });
-}
+};
 
 module.exports = chat;

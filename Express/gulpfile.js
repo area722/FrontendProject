@@ -57,3 +57,9 @@ gulp.task('images', function() {
 gulp.task('default', ['clean'], function() {
     gulp.start('images','js','lib','css');
 });
+
+gulp.task('validate', function () {
+    return gulp.src(['modules/**/*.js','routes/**/*.js','app.js'])
+        .pipe(jshint())
+        .pipe(jshint.reporter('default'));
+});
