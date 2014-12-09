@@ -37,12 +37,14 @@ h4 {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("../img/style/backgrounds/nexus.png"); }
+  background-image: url("../img/content/style/nexus.png"); }
 #slide-1 #map-canvas {
   z-index: -1;
   width: 100%;
   height: 500px;
-  position: absolute; }
+  position: absolute;
+  background: url("../img/content/style/back_no_maps.png") no-repeat;
+  background-size: cover; }
 #slide-1 h1, #slide-1 h2 {
   position: fixed;
   margin-left: auto;

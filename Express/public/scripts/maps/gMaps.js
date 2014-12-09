@@ -3,8 +3,7 @@
  */
 
 (function getLocation() {
-    var pos = {coords:{latitude:21.344507,longitude:-157.974891}};
-    var nav = null;
+    var pos,nav = null;
     if (nav === null) {
         nav = window.navigator;
     }
@@ -51,7 +50,6 @@
             "an unknown error (Code: " + strErrorCode + ").";
         }
         console.log(message);
-        initialize(pos);
     }
 })();
 
