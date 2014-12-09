@@ -46,5 +46,3 @@ var chat = require("./modules/chat/chat")(io);
 //database
 var db = require("./modules/database/connectDb");
 var score = require("./modules/database/db");
-
-

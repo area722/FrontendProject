@@ -7,4 +7,4 @@ module.exports = function(app){
     app.get("/home",function(req,res){
         res.render("index",{title: "Mijn GsmTijdsLijn",time:"2004 - 2014"});
     });
-}
+};

@@ -1,6 +1,7 @@
 /**
  * Created by Wouter on 04/12/14.
  */
+var socket = io.connect();
 $("#txtUsername").show();
 var messageLeft = $(".messageLeft");
 var messagRight = $(".messageRight");
@@ -64,13 +65,13 @@ socket.on("newMessage", function (data) {
     if(socketId == data.id){
         //eigen message
         messagRight.children(".message").text(data.mes);
-        messagRight.children(".userTime").text(data.name+" "+data.time)
+        messagRight.children(".userTime").text(data.name+" "+data.time);
         messagRight.clone().appendTo("#messages");
     }
     else{
         //adere message
         messageLeft.children(".message").text(data.mes);
-        messageLeft.children(".userTime").text(data.name+" "+data.time)
+        messageLeft.children(".userTime").text(data.name+" "+data.time);
         messageLeft.clone().appendTo("#messages");
     }
 });

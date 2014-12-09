@@ -14,7 +14,7 @@ var Snake = function (id,length,bodyArr,startX,startY) {
     this.direction = "left";
         //arr[Math.floor(Math.random() * arr.length)];
     this.tail = null;
-}
+};
 
 Snake.prototype = {
     create: function () {

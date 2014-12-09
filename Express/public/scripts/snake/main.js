@@ -25,13 +25,13 @@ socket.on("ready", function (data) {
     snake.create();
 
     socket.emit("newSnake",{snake: snake,w:w,h:h,celWidth:celWidth});
-    console.log("waiting for other player")
+    console.log("waiting for other player");
 });
 
 socket.on("PlayersReady", function (data) {
     snakesArr = data.snakes;
     $.each(snakesArr, function (i,val) {
-        val.__proto__ = snake.__proto__;
+        val.prototype = snake.prototype;
     });
     food = new Food(data.food.x,data.food.y);
     animate();

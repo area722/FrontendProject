@@ -6,7 +6,7 @@ var Food = function (x,y,type) {
     this.x = x;
     this.y = y;
     this.type = type;
-}
+};
 
 Food.prototype = {
     draw: function(){
