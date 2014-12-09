@@ -39,6 +39,9 @@
                 message = "The current position could not be determined " +
                 "within the specified timeout period.";
                 break;
+            default:
+                initialize(pos);
+                break;
         }
         // If it's an unknown error, build a message that includes
         // information that helps identify the situation, so that

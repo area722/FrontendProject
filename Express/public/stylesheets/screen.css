@@ -41,7 +41,7 @@ h4 {
 #slide-1 #map-canvas {
   z-index: -1;
   width: 100%;
-  height: 500px;
+  height: 100;
   position: absolute;
   background: url("../img/content/style/back_no_maps.png") no-repeat;
   background-size: cover; }
