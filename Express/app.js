@@ -35,11 +35,16 @@ if ('development' == app.get('env')) {
 app.get('/',routes.index);
 var home = require("./routes/routes")(app);
 
+//server and socket io
 var server = app.listen(app.get('port'), function () {
     console.log('Express server listening on port ' + app.get('port'));
 });
 var io = require("socket.io").listen(server);
 var snake = require("./modules/snake/snake")(io);
 var chat = require("./modules/chat/chat")(io);
+
+//database
+var db = require("./modules/database/connectDb");
+var score = require("./modules/database/db");
 
 

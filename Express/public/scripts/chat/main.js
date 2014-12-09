@@ -32,8 +32,10 @@ $("#selectRooms").change(function (e) {
     $("#rooms p").text('Room: '+currentRoom);
 });
 
-$("#changeRoom").click(function (e) {
+$("#rooms p").click(function (e) {
     $(this).hide();
+    currentRoom = "";
+    $("#messages").children().remove();
     $("#selectRooms").show();
     $("#rooms p").hide();
     $("#chatInput").attr("placeholder", "Please Select a room above");

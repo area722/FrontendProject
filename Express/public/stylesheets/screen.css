@@ -150,6 +150,8 @@ h4 {
         font-family: 'Montserrat', sans-serif; }
       #slide-4 #chat #rooms select option {
         font-size: 20px; }
+      #slide-4 #chat #rooms input[type="text"] {
+        width: 100%; }
     #slide-4 #chat #messages {
       height: 49%;
       overflow: hidden; }

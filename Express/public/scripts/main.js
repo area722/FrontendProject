@@ -19,3 +19,4 @@ function init(){
         fadeOutTime: 700
     });
 }
+
