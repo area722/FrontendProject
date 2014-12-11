@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" viewBox="0 0 1007.4 516.8" xml:space="preserve">
+<path id="phone" fill="#1E1E1E" stroke="#B3B3B3" stroke-width="2" stroke-miterlimit="10" d="M934.5,496H73.7
+	c-19.5,0-37.9-15.7-40.4-35c-5.6-43.5-13.9-122.1-13.9-205.3c0-83.2,8.3-161.8,13.9-205.3c2.5-19.4,20.8-35,40.4-35h860.7
+	c13,0,29.4,10,32.6,22.6c8.4,33.3,19.3,104.3,19.3,217.7S975.4,440,967,473.4C963.9,486,947.5,496,934.5,496z"/>
+<polygon fill="#0E0E0E" points="101.9,475.1 877.4,475.1 877.4,403.5 101.9,91.2 "/>
+<polygon fill="#0C0C0C" points="101.9,36.2 101.9,91.2 877.4,403.5 877.4,36.2 "/>
+<circle id="Camera" fill="#7B7B7B" stroke="#131313" stroke-miterlimit="10" cx="67.4" cy="256.3" r="11.6"/>
+<circle id="Mic" fill="#7B7B7B" cx="68.8" cy="417" r="4.6"/>
+<line id="Left" fill="none" stroke="#555555" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="206.9" y1="500.5" x2="357.9" y2="500.5"/>
+<line id="Right" fill="none" stroke="#555555" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="144.3" y1="10.9" x2="206.9" y2="10.9"/>
+<rect x="99.1" y="36.2" fill="#FFFFFF" width="778.3" height="439.1"/>
+</svg>

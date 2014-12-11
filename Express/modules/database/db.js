@@ -4,7 +4,7 @@
 
 module.exports = (function getAllUsers(){
     var score = require('./models/score');
-    score.find({id:"test"}).exec(function (err,docs) {
+    score.find({}).exec(function (err,docs) {
         console.log(docs);
     });
 })();
