@@ -11,7 +11,9 @@ var gulp = require("gulp"),
     concat = require('gulp-concat'),
     notify = require('gulp-notify'),
     rename = require('gulp-rename'),
-    del = require('del');
+    del = require('del'),
+    browserSync = require('browser-sync');
+
 
 gulp.task('clean', function(cb) {
     del(['public/build'], cb)
@@ -26,7 +28,7 @@ gulp.task('js', function () {
         .pipe(rename({suffix: '.min'}))
         .pipe(uglify())
         .pipe(gulp.dest('public/build/js'))
-        .pipe(notify({ message: 'js task complete' }));;
+        .pipe(notify({ message: 'js task complete' }));
 });
 
 gulp.task('lib',function(){
@@ -62,10 +64,4 @@ gulp.task('validate', function () {
     return gulp.src(['modules/**/*.js','routes/**/*.js','app.js'])
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
-});
-
-gulp.task('uglify', function () {
-    return gulp.src("views/iphone_new.svg")
-        .pipe(uglify())
-        .pipe(gulp.dest("vieuws/svg"));
 });

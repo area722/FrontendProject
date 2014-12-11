@@ -8,6 +8,6 @@ module.exports = function(app){
     });
 
     app.post("addScore",function(req,res){
-        res.
+
     });
 };
