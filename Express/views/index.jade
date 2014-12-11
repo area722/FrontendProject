@@ -41,57 +41,7 @@ block content
    div(class="slide",id="slide-4")
       //chat
       div(id="chat")
-         <svg version="1.1" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"	 y="0px" viewBox="0 0 374.7 767" xml:space="preserve">
-         <g id="Layer_1">
-         <g id="iphone" transform="translate(576.000000, 177.000000)">
-         <g>
-         <path fill="#010101" stroke="#7F89A3" stroke-width="2" d="M-254.3-168.7H-523c-24.4,0-44.1,19.7-44.1,43.9v664.1c0,24.3,19.7,43.9,44.1,43.9h268.7c24.4,0,44.1-19.7,44.1-43.9v-664.1C-210.2-149.1-229.9-168.7-254.3-168.7z M-235.1,476.4h-307.3V-70.1h307.3V476.4z"/>
-         <rect x="-542.3" y="-70.1" fill="#5C5B5C" stroke="#7F89A3" stroke-width="2" width="307.3" height="546.6"/>
-         </g>
-         <path id="speaker" fill="#FFFFFF" stroke="#7F89A3" d="M-355.7-98.3c0,1.7-1.2,3.1-2.7,3.1h-55.2c-1.5,0-2.7-1.4-2.7-3.1v-7.1c0-1.7,1.2-3.1,2.7-3.1h55.2c1.5,0,2.7,1.4,2.7,3.1V-98.3L-355.7-98.3z"/>
-         <circle id="camera_1_" fill="#FFFFFF" stroke="#7F89A3" cx="-385.9" cy="-136" r="8.2">
-         </circle>
-         <ellipse id="lock_1_" fill="#FFFFFF" stroke="#7F89A3" cx="-388.5" cy="528.4" rx="27.6" ry="27.5">
-         </ellipse>
-         </g>
-         </g>
-         <g id="Layer_2">
-         <rect x="33.7" y="106.9" fill="#ABABAB" stroke="#7F89A3" stroke-width="2" width="307" height="64.6"/>
-         <rect x="34.1" y="605.9" fill="#ABABAB" stroke="#7F89A3" stroke-width="2" width="306.9" height="47.6"/>
-         </g>
-         <foreignObject x="33" y="107" width="200" height="150">
-         <body xmlns="http://www.w3.org/1999/xhtml">
-         div(id="rooms")
-            select(id="selectRooms")
-               option(value="none" disabled selected) please selecte a room
-               option(value="games") Games
-               option(value="smartphones") Smartphones
-               option(value="pc") Pc's
-            p please fill in a username below
-         </body>
-         </foreignObject>
-         <foreignObject x="4" y="607" width="310" height="150">
-         <body xmlns="http://www.w3.org/1999/xhtml">
-         div(id="input")
-            div(id="username")
-               label(for="txtUsername") Username:
-               input(type="text",id="txtUsername",placeholder="press enter to submit")
-            div(id="message")
-               input(type="text",placeholder="press enter to send",id="chatInput")
-         </body>
-         </foreignObject>
-         <foreignObject x="50" y="616" width="200" height="150">
-         <body xmlns="http://www.w3.org/1999/xhtml">
-         //div(id="messages")
-         //   div(class="messageLeft")
-         //      p(class="message") message
-         //      p(class="userTime") wouter 15:00:14
-         //   div(class="messageRight")
-         //      p(class="message") message
-         //      p(class="userTime") wouter 15:00:14
-         </body>
-         </foreignObject>
-         </svg>
+         include svg.jade
       //content
       div(id="content")
          h3 Iphone

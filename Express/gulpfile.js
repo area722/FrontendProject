@@ -63,3 +63,9 @@ gulp.task('validate', function () {
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
 });
+
+gulp.task('uglify', function () {
+    return gulp.src("views/iphone_new.svg")
+        .pipe(uglify())
+        .pipe(gulp.dest("vieuws/svg"));
+});
