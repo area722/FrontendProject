@@ -5,10 +5,10 @@
 var mongoose = require("mongoose");
 var scoreSheme = new mongoose.Schema(
     {
-        id: {type: String},
-        name: {type: String},
-        highscore: {type: String},
-        createdOn: {type:Date, 'default':Date.now }
+        id: String,
+        name: String,
+        highscore: String,
+        createdOn: Date
     }
 );
 

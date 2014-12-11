@@ -1,4 +1,43 @@
 {
-  "name": "application-name",
-  "version": "0.0.1"
+  "name": "GsmTimeLine",
+  "version": "1.0.0",
+  "description": "My Timeline of Phones",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.9.2",
+    "express": "^3.4.4",
+    "gulp-imagemin": "^2.0.0",
+    "del": "^1.1.0",
+    "gulp-notify": "^2.0.1",
+    "gulp-order": "^1.1.1",
+    "jade": "^1.7.0",
+    "gulp-minify-css": "^0.3.11",
+    "socket.io": "^1.2.1",
+    "randomcolor": "^0.1.1",
+    "mongoose": "^3.8.20",
+    "stylus": "^0.49.3",
+    "gulp-rename": "^1.2.0",
+    "gulp-ruby-sass": "^0.7.1",
+    "gulp-strip-debug": "^1.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "none"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/area722/FrontendProject"
+  },
+  "keywords": [
+    "smartphone",
+    "timeline",
+    "node.js",
+    "express"
+  ],
+  "author": "Wouter Waeytens",
+  "license": "none",
+  "bugs": {
+    "url": "https://github.com/area722/FrontendProject/issues"
+  },
+  "homepage": "https://github.com/area722/FrontendProject"
 }

@@ -205,31 +205,22 @@ h4{
   }
 
   #chat{
-    background-image: url("../img/content/Iphone.png");
     float: left;
     height: 81%;
     width: 23%;
     margin-top: 5%;
     margin-left: 23%;
-    background-size: cover;
-    background-color: #5c5b5b;
 
     #rooms{
-      background-color: #aaaaaa;
-      width:85%;
-      height: 9%;
-      margin-left: 8%;
-      margin-top: 34%;
-      padding: 1px;
-
+      background-color: red;
+      width: 100%;
+      height: 100%;
       p{
         font-size: 17px;
         text-align: center;
       }
 
       select{
-        margin-top: 14px;
-        margin-left: 36px;
         background-color: #aaaaaa;
         color: #ffffff;
         font-family: 'Montserrat', sans-serif;
@@ -237,10 +228,6 @@ h4{
 
       select option{
         font-size: 20px;
-      }
-
-      input[type="text"]{
-        width: 100%;
       }
     }
 
@@ -279,8 +266,7 @@ h4{
       padding-top: 13px;
       padding-bottom: 13px;
       padding-left: 11px;
-      width: 82%;
-      background-color: #b0b0b0;
+      width: 100%;
     }
 
   }

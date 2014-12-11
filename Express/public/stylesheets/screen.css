@@ -41,7 +41,7 @@ h4 {
 #slide-1 #map-canvas {
   z-index: -1;
   width: 100%;
-  height: 100;
+  height: 100px;
   position: absolute;
   background: url("../img/content/style/back_no_maps.png") no-repeat;
   background-size: cover; }
@@ -143,34 +143,24 @@ h4 {
   #slide-4 input, #slide-4 button, #slide-4 select, #slide-4 option[value="none"] {
     display: none; }
   #slide-4 #chat {
-    background-image: url("../img/content/Iphone.png");
     float: left;
     height: 81%;
     width: 23%;
     margin-top: 5%;
-    margin-left: 23%;
-    background-size: cover;
-    background-color: #5c5b5b; }
+    margin-left: 23%; }
     #slide-4 #chat #rooms {
-      background-color: #aaaaaa;
-      width: 85%;
-      height: 9%;
-      margin-left: 8%;
-      margin-top: 34%;
-      padding: 1px; }
+      background-color: red;
+      width: 100%;
+      height: 100%; }
       #slide-4 #chat #rooms p {
         font-size: 17px;
         text-align: center; }
       #slide-4 #chat #rooms select {
-        margin-top: 14px;
-        margin-left: 36px;
         background-color: #aaaaaa;
         color: #ffffff;
         font-family: 'Montserrat', sans-serif; }
       #slide-4 #chat #rooms select option {
         font-size: 20px; }
-      #slide-4 #chat #rooms input[type="text"] {
-        width: 100%; }
     #slide-4 #chat #messages {
       height: 49%;
       overflow: hidden; }
@@ -197,8 +187,7 @@ h4 {
       padding-top: 13px;
       padding-bottom: 13px;
       padding-left: 11px;
-      width: 82%;
-      background-color: #b0b0b0; }
+      width: 100%; }
 
 #slide-5 {
   background-color: #452537; }
