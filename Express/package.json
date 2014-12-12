@@ -1,13 +1,18 @@
 {
   "name": "gsmtijdslijn",
   "version": "1.0.0",
-  "description": "test",
+  "description": "",
   "main": "app.js",
-  "dependencies": {},
-  "devDependencies": {},
+  "dependencies": {
+    "body-parser": "^1.10.0",
+    "express": "^4.10.5",
+    "http": "0.0.0",
+    "mongoose": "^3.8.20",
+    "randomcolor": "^0.1.1",
+    "socket.io": "^1.2.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Wouter Waeytens",
   "license": "ISC"
