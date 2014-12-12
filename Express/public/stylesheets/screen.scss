@@ -82,6 +82,13 @@ h4{
     top: 50%;
   }
 
+  #arrow{
+    position: fixed;
+    width: 10%;
+    top: 79%;
+    left: 45%;
+  }
+
 }
 
 // slide 2
@@ -91,7 +98,8 @@ h4{
   #nokiaImg{
     float: left;
     margin-left: 20%;
-    margin-top: 10%
+    margin-top: 10%;
+    //width: 25%;
   }
 
   #content{

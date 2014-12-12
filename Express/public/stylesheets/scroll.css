@@ -13,6 +13,19 @@
     }
 }
 
+#arrow{
+    -skrollr-animation-name:arrowAnim;
+}
+
+@-skrollr-keyframes arrowAnim{
+    0{
+        top: 79%;
+    }
+    430{
+        top: 100%;
+    }
+}
+
 #map-canvas{
     -skrollr-animation-name: mapAnimation;
 }

@@ -62,6 +62,11 @@ h4 {
   font-family: 'Montserrat', sans-serif;
   text-shadow: 2px 1px 0px #6c6c6c;
   top: 50%; }
+#slide-1 #arrow {
+  position: fixed;
+  width: 10%;
+  top: 79%;
+  left: 45%; }
 
 #slide-2 {
   background: radial-gradient(#7c87a7, #425380); }
