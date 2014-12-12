@@ -7,7 +7,7 @@ var routes = require("./routes");
 var http = require("http");
 var path = require("path");
 var bodyParser = require("body-parser");
-var errorHandler = require("express-error-handler");
+//var errorHandler = require("express-error-handler");
 var router = express.Router();
 
 var app = express();
@@ -30,7 +30,8 @@ app.use(bodyParser.urlencoded({
 //}
 
 app.get('/',routes.index);
-var home = require("./routes/routes")(app);
+//home
+require("./routes/routes")(app);
 
 //server and socket io
 var server = app.listen(app.get('port'), function () {
@@ -41,5 +42,5 @@ var snake = require("./modules/snake/snake")(io);
 var chat = require("./modules/chat/chat")(io);
 
 //database
-var db = require("./modules/database/connectDb");
-var score = require("./modules/database/db");
+require("./modules/database/connectDb");
+require("./modules/database/db");
