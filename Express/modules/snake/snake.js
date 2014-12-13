@@ -1,7 +1,6 @@
 /**
  * Created by Wouter on 22/11/14.
  */
-
 var snake = function (io) {
     var snakesArrServer = [],color = require("randomcolor");
     io.sockets.on("connection", function (socket) {

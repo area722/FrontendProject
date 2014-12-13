@@ -1,9 +1,7 @@
 /**
  * Created by Wouter on 25/11/14.
  */
-
 var socket = io.connect();
-
 var canvas = $("#snakeCanvas")[0],ctx = canvas.getContext("2d"),w,h,celWidth = 10,snakesArr = [],food;
 var snake;
 var socketid = "";

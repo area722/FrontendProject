@@ -1,7 +1,7 @@
 /**
  * Created by Wouter on 22/11/14.
  */
-
+var socket = io.connect();
 skrollr.init({
     smoothScrolling: false,
     mobileDeceleration: 0.004
@@ -19,4 +19,3 @@ function init(){
         fadeOutTime: 700
     });
 }
-

@@ -29,18 +29,22 @@ app.use(bodyParser.urlencoded({
 //    app.use(errorHandler);
 //}
 
-app.get('/',routes.index);
-//home
-require("./routes/routes")(app);
-
-//server and socket io
+//server
 var server = app.listen(app.get('port'), function () {
     console.log('Express server listening on port ' + app.get('port'));
 });
+
+//socket io
 var io = require("socket.io").listen(server);
 var snake = require("./modules/snake/snake")(io);
 var chat = require("./modules/chat/chat")(io);
 
+//router
+app.get('/',routes.index);
+//home
+require("./routes/routes")(app);
+
 //database
 require("./modules/database/connectDb");
 require("./modules/database/db");
+
