@@ -94,7 +94,7 @@
 
 @-skrollr-keyframes slide3Anim {
     3600{
-        left:100%
+        left:100%;
     }
     4400{
         left: 0%;
@@ -107,7 +107,11 @@
 }
 
 @-skrollr-keyframes slide4Anim {
+    0{
+        display: none;
+    }
     5400{
+        display: block;
         top:-100%;
     }
     6200{

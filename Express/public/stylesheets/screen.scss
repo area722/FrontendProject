@@ -113,8 +113,6 @@ h4{
   }
 
   h4{
-    margin-left: auto;
-    margin-right: auto;
     right:0;
     left:0;
     text-align: center;
@@ -163,10 +161,10 @@ h4{
 #slide-3{
   background-color: #2f323b;
 
-  img{
-    position: fixed;
-    margin-top: 24%;
-    margin-left: 56%;
+  #img3{
+    position: absolute;
+    top: 43%;
+    left: 56%;
     width: 40%;
     height: auto;
   }
@@ -181,8 +179,8 @@ h4{
     }
   }
 
-  h4{
-    position: fixed;
+  #date3{
+    position: absolute;
     left: 71%;
     top: 50%;
   }
@@ -219,7 +217,6 @@ h4{
 
   #chat{
     float: left;
-    height: 81%;
     width: 23%;
     margin-top: 5%;
     margin-left: 23%;
@@ -280,8 +277,19 @@ h4{
       padding-bottom: 13px;
       padding-left: 11px;
       width: 100%;
+      background-color: red;
     }
 
+    #os p{
+      font-size: 13px;
+    }
+
+  }
+
+  #date4{
+    position: absolute;
+    top: 77%;
+    left: 48%;
   }
 }
 
@@ -300,12 +308,18 @@ h4{
     }
   }
 
-  img{
+  #imgNexus{
     float: left;
     width: 37%;
     height: auto;
     margin-top: 8%;
     margin-left: 6%;
+  }
+
+  #date5{
+    position: absolute;
+    top: 70%;
+    left: 44%;
   }
 }
 

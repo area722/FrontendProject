@@ -1,15 +1,3 @@
-@media screen and (max-width: 1065px) {
-  //slide 2
-  #slide-2{
-    img{
-      margin-left: 10%;
-      margin-top: 10%
-    }
-    #date{
-      top:79%;
-    }
-  }
-}
 @media screen and (max-width: 1200px) {
   #slide-1 {
     h1,h2{
@@ -39,13 +27,38 @@
   }
 
   #slide-3{
-    background-color: #000066;
-    img{
-      top: 0%;
+    #date3{
+      top: 46%;
+      left: 69%;
     }
-    h4{
-      left:68%;
-      top: 48%;
+  }
+
+  #slide-5{
+    #content{
+      margin-left: 4%;
+    }
+    #date5{
+      left: 39%;
+    }
+  }
+}
+
+@media screen and (max-width: 1065px) {
+  //slide 2
+  #slide-2 {
+    img {
+      margin-left: 10%;
+      margin-top: 10%
+    }
+    #date {
+      top: 79%;
+    }
+  }
+
+  #slide-3 {
+    #date3 {
+      top: 43%;
+      left: 68%;
     }
   }
 }
@@ -93,6 +106,28 @@
       width: 400px;
     }
   }
+
+  #slide-3 {
+    #date3 {
+      top: 43%;
+      left: 67%;
+    }
+  }
+  #slide-4{
+    #chat{
+      margin-left: 12%;
+    }
+  }
+
+  #slide-5{
+    #imgNexus{
+      width: 25%;
+      margin-top: 15%;
+    }
+    #content{
+      width: 25%;
+    }
+  }
 }
 
 @media screen and (max-width: 830px) {
@@ -100,6 +135,23 @@
   #slide-2 {
     img{
       margin-left: 3%;
+    }
+  }
+  #slide-3 {
+    #date3 {
+      top: 47%;
+      left: 57%;
+      font-size: 31px;
+    }
+
+    #img3{
+      left: 42%;
+      top: 39%;
+    }
+  }
+  #slide-4{
+    #chat{
+      margin-left: 5%;
     }
   }
 }
@@ -117,7 +169,7 @@
 
     h2{
       font-size: 40px;
-      top:43%;
+      top:56%;
     }
   }
 
@@ -142,17 +194,17 @@
 
     h2{
       font-size: 30px;
-      top:43%;
+      top:56%;
     }
   }
 
   #slide-2{
-    img{
+    #nokiaImg{
       width: 26%;
       height: auto;
     }
     h3{
-      margin-top: 55px;
+      margin-top: 20px;
       font-size: 34px;
     }
     #content{
@@ -161,7 +213,6 @@
     p{
       font-size: 14px;
     }
-
   }
 }
 
@@ -178,13 +229,102 @@
 
     h2{
       font-size: 20px;
-      top:39%;
+      top:50%;
     }
   }
 }
 
 //mobile
-@media screen and (max-device-width: 360px) {
+@media screen and (min-device-width: 300px) and (max-device-width: 359px) {
+  h4{
+    display:none;
+  }
+  //slide 2
+  #slide-2{
+    #nokiaImg{
+      margin-left:8%;
+      float: none;
+      width: 17%;
+      height: auto;
+    }
+
+    #content{
+      width: 30%;
+      float: none;
+
+      h3{
+        margin-top: 0%;
+        text-align: center;
+        font-size: 33px;
+      }
+
+      p{
+        text-align: center;
+      }
+
+      #snakePlay{
+        display: none;
+      }
+    }
+  }
+  #slide-3{
+    #img3{
+      position: absolute;
+      left:2%;
+      top: 4%;
+      width: 30%;
+    }
+
+    #content{
+      margin-top: 26%;
+      margin-left: 2%;
+      width: 290px;
+      h3{
+        margin-top: 0%;
+        text-align: center;
+      }
+      p{
+        text-align: center;
+        font-size: 14px;
+      }
+    }
+  }
+
+  #slide-4{
+    #chat{
+      margin-left: 5%;
+      margin-top: 0%;
+      width: 24%;
+    }
+    #content{
+      display: none;
+    }
+  }
+
+  #slide-5{
+    #content{
+      margin-top: 0%;
+      float: none;
+      p{
+        display: none;
+      }
+      h3{
+        text-align: center;
+        display: block;
+      }
+    }
+    #imgNexus{
+      margin-top: 0%;
+      margin-left: 2%;
+      float: none;
+      width: 30%;
+    }
+  }
+}
+@media screen and (min-device-width: 360px) and (max-device-width: 560px) {
+  h4{
+    display:none;
+  }
   //slide 2
   #slide-2{
     #nokiaImg{
@@ -205,66 +345,168 @@
 
       p{
         text-align: center;
-        font-size: 17px;
       }
 
       #snakePlay{
         display: none;
       }
     }
+  }
+  #slide-3{
+    #img3{
+      position: absolute;
+      left:4%;
+      top: 4%;
+      width: 30%;
+    }
 
-    h4{
-      display:none;
+    #content{
+      margin-top: 26%;
+      margin-left: 3%;
+      width: 290px;
+      h3{
+        text-align: center;
+      }
+      p{
+        text-align: center;
+        font-size: 14px;
+      }
+    }
+  }
+
+  #slide-4{
+    #chat{
+      margin-left: 8%;
+      margin-top: 2%;
+      width: 23%;
+    }
+    #content{
+      display: none;
+    }
+  }
+
+  #slide-5{
+    #content{
+      margin-top: 0%;
+      float: none;
+      p{
+        display: none;
+      }
+      h3{
+        text-align: center;
+        display: block;
+        margin-left: 12%;
+      }
+    }
+    #imgNexus{
+      margin-top: 0%;
+      margin-left: 0%;
+      float: none;
+      width: 37%;
     }
   }
 }
 
 //landscape
-@media handheld and (max-device-height: 600px) and (max-device-width: 1065px){
-  //slide 1
-  #slide-1 {
-    h1,h2{
-      top:30%;
-    }
+@media screen and (min-device-width: 560px) and (max-device-width: 700px) {
+  h4{
+    display:none;
+  }
+  #slide-1{
     h1{
-      font-size: 72px;
-    }
-
-    h2{
-      font-size: 40px;
-      top:50%;
+      top: 23%;
     }
   }
-
   //slide 2
   #slide-2{
-    img{
-      width: 25%;
+    #nokiaImg{
+      width: 15%;
       height: auto;
-      margin-left: 10%;
+      margin-left: 3%;
       margin-top: 4%;
     }
 
-    #content{
-      width: 500px;
+    #content {
+      float: left;
+      width: 385px;
       margin-top: 4%;
-      h3{
-        margin-top:0;
-        font-size: 60px;
+      h3 {
+        margin-top: 0;
+        font-size: 40px;
         margin-bottom: 0px;
       }
-      p{
+      p {
         margin-top: 0px;
-        font-size: 25px;
+        font-size: 16px;
       }
 
-      #snakePlay{
+      #snakePlay {
         display: none;
       }
     }
+  }
 
-    h4{
-      display:none;
+  #slide-3 {
+    #content{
+      margin-top: 0%;
+      margin-left: 3%;
+      width: 290px;
+      float: left;
+      h3 {
+        font-size: 40px;
+        margin-top: 7%;
+      }
+      p {
+        font-size: 15px;
+      }
+    }
+
+    #img3 {
+      position: relative;
+      float: left;
+      left: 0%;
+      top: 0%;
+      margin-left: 1%;
+      margin-top: 3%;
+      width: 26%;
+    }
+  }
+
+  #slide-4{
+    #chat{
+      margin: 3%;
+      width: 12%;
+    }
+    #content{
+      margin-top: 0%;
+      margin-left: 0%;
+      width: 400px;
+      h3 {
+        font-size: 40px;
+        margin-top: 7%;
+      }
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+
+  #slide-5{
+    #imgNexus{
+      width : 20%;
+      margin-top: 3%;
+      margin-left: 1%;
+    }
+    #content{
+      margin-top: 2%;
+      width: 300px;
+      h3{
+        font-size: 40px;
+        margin-top: 1%;
+      }
+      p {
+        font-size: 15px;
+      }
     }
   }
 }
