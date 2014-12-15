@@ -2,10 +2,9 @@
  * Created by Wouter on 22/11/14.
  */
 
-var Food = function (x,y,type) {
+var Food = function (x,y) {
     this.x = x;
     this.y = y;
-    this.type = type;
 };
 
 Food.prototype = {

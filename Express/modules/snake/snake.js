@@ -1,7 +1,7 @@
 /**
  * Created by Wouter on 22/11/14.
  */
-var snake = function (io) {
+var snake = function (io,app) {
     var snakesArrServer = [],color = require("randomcolor");
     io.sockets.on("connection", function (socket) {
         socket.on("play", function (data) {
@@ -25,15 +25,18 @@ var snake = function (io) {
         });
 
         socket.on("newFood",function(data){
-            //TODO aan andere laten weten dat hij opgegeten heeft
            io.sockets.emit("newFood",{id:socket.id,x:Math.round(Math.random()*(data.w-data.celWidth)/data.celWidth),y:Math.round(Math.random()*(data.h-data.celWidth)/data.celWidth)});
+        });
+
+        socket.on("dead",function(data){
+            io.sockets.emit("deadServer",{id:data.id});
         });
 
         socket.on("disconnect",function(data){
             console.log("disconnect "+socket.id);
             snakesArrServer.forEach(function (item,i) {
                 if(item.id === socket.id){
-                    console.log(snakesArrServer.splice(i,1));
+                    snakesArrServer.splice(i,1);
                 }
             });
             io.sockets.emit("disconnect",{id: socket.id});

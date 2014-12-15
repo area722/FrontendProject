@@ -10,7 +10,10 @@ module.exports = function(app){
         res.render("index",{title: "Mijn GsmTijdsLijn",time:"2004 - 2014",os:agent.os.toString()});
     });
 
-    app.post("addScore",function(req,res){
-
+    app.post("/addScore",function(req,res){
+        //TODO. insert highscore in db
+        console.log(req.body);
+        //TODO. get hightscores from db
+        res.json({test:"tetten"});
     });
 };

@@ -10,14 +10,15 @@ var Snake = function (id,length,bodyArr,startX,startY) {
     this.startY = startY;
     this.nx = 0;
     this.ny = 0;
-    var arr = ["up","left","down"];
+    var arr = ["up","right","down"];
     this.direction = arr[Math.floor(Math.random() * arr.length)];
     this.tail = null;
+    this.player = null;
 };
 
 Snake.prototype = {
     create: function () {
-        for (var i = 0; i < this.length; i++) {
+        for(var i = this.length-1; i>=0; i--){
             this.bodyArr.push({x: i + this.startX, y: 0 + this.startY});
         }
     },
@@ -35,7 +36,6 @@ Snake.prototype = {
         else if (this.direction === "down") this.ny++;
 
         this.checkEatSelf(w, h);
-
         this.eat(food);
 
         this.bodyArr.unshift(this.tail); //puts back the tail as the first cell
@@ -66,11 +66,12 @@ Snake.prototype = {
             this.ny = -1;
         }
 
-        if (this.ckeckCollision()) {
-            console.log("ik eet mezelf op");
+        if(this.checkCollision()){
+            //console.log("ik eet mezelf op");
+            socket.emit("dead",{id:this.id});
         }
     },
-    ckeckCollision: function () {
+    checkCollision: function () {
         for (var i = 0; i < this.bodyArr.length; i++) {
             if (this.bodyArr[i].x == this.nx && this.bodyArr[i].y == this.ny) {
                 return true;

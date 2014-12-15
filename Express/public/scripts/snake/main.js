@@ -33,6 +33,10 @@ socket.on("PlayersReady", function (data) {
     $("#numplayers").text(snakesArr.length+" players");
     $.each(snakesArr, function (i,val) {
         val.__proto__ = Object.getPrototypeOf(snake);
+        if(val.id === socketid){
+            $("#player").text("You are player "+(i+1));
+            val.player = i+1;
+        }
     });
     food = new Food(data.food.x,data.food.y);
     animate();
@@ -51,7 +55,6 @@ function animate(){
         val.draw("#1f2c13","white",w,h,food);
     });
     food.draw();
-
     setTimeout(function () {
         animate();
     },100);
@@ -62,7 +65,7 @@ $(window).keydown(function(e){
     if(key >= 37 && key <= 40){
         e.preventDefault();
         $.each(snakesArr, function (i,val) {
-            if(val.id == socketid){
+            if(val.id === socketid){
                 if(key === 37 && val.direction !== "right") {
                     socket.emit("control",{d:"left",x:val.nx, y:val.ny});
                 }
@@ -82,10 +85,10 @@ $(window).keydown(function(e){
 
 socket.on("serverControl", function (data) {
     $.each(snakesArr, function (i,val) {
-        if(val.id === data.id && val.direction != data.control.d){
+        if(val.id === data.id && val.direction !== data.control.d){
             val.direction = data.control.d;
-            val.nx = data.control.x;
-            val.ny = data.control.y;
+            //val.nx = data.control.x;
+            //val.ny = data.control.y;
         }
     });
 });
@@ -96,12 +99,30 @@ socket.on("newFood", function (data) {
     $.each(snakesArr,function(i,val){
         if(val.id === data.id){
             val.tail = {x: val.nx, y: val.ny};
-            val.length++;
+        }
+    });
+});
+
+socket.on("deadServer",function(data){
+    console.log(data.id + " dood.");
+    $.each(snakesArr,function (i,val) {
+        if(val.id === data.id) {
+            snakesArr.splice(i,1);
+            if(snakesArr.length <= 1){
+                console.log("ik verlies");
+                //$("#waiting").text("Player "+ i+1 + "lost").show();
+            }
+
+            if(snakesArr.length <= 1){
+                console.log("ik win");
+                //$("#waiting").text("You Won").show();
+            }
         }
     });
 });
 
 socket.on("disconnect",function(data){
+    console.log("disconnect "+data.id);
     $.each(snakesArr,function(i,val){
         if(val.id === data.id){
             snakesArr.splice(i,1);
@@ -109,3 +130,14 @@ socket.on("disconnect",function(data){
     });
 });
 
+$("#highscore").click(function (e) {
+    var score = 0;
+    $.each(snakesArr,function (i,val) {
+        if (val.id === socketid) {
+            score = val.length;
+        }
+    });
+    $.post("/addScore",{name: "tetten",score:score}).done(function (data) {
+        console.log(data);
+    });
+});

@@ -1,8 +1,7 @@
 /**
  * Created by Wouter on 04/12/14.
  */
-var socket = io.connect();
-$("#txtUsername").show();
+var socket = io.connect();$("#txtUsername").show();
 var messageLeft = $(".messageLeft");
 var messagRight = $(".messageRight");
 $(".messageLeft").remove();
@@ -34,13 +33,15 @@ $("#selectRooms").change(function (e) {
 });
 
 $("#rooms p").click(function (e) {
-    $(this).hide();
-    currentRoom = "";
-    $("#messages").children().remove();
-    $("#selectRooms").show();
-    $("#rooms p").hide();
-    $("#chatInput").attr("placeholder", "Please Select a room above");
-    socket.emit("leaveRoom",currentRoom);
+    if($(this).text() !== "please fill in a username below"){
+        $(this).hide();
+        currentRoom = "";
+        $("#messages").children().remove();
+        $("#selectRooms").show();
+        $("#rooms p").hide();
+        $("#chatInput").attr("placeholder", "Please Select a room above");
+        socket.emit("leaveRoom",currentRoom);
+    }
 });
 
 $("#chatInput").keydown(function(e){

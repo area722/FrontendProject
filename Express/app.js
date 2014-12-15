@@ -36,7 +36,7 @@ var server = app.listen(app.get('port'), function () {
 
 //socket io
 var io = require("socket.io").listen(server);
-var snake = require("./modules/snake/snake")(io);
+var snake = require("./modules/snake/snake")(io,app);
 var chat = require("./modules/chat/chat")(io);
 
 //router
