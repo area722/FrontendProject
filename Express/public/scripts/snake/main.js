@@ -104,19 +104,10 @@ socket.on("newFood", function (data) {
 });
 
 socket.on("deadServer",function(data){
-    console.log(data.id + " dood.");
     $.each(snakesArr,function (i,val) {
         if(val.id === data.id) {
             snakesArr.splice(i,1);
-            if(snakesArr.length <= 1){
-                console.log("ik verlies");
-                //$("#waiting").text("Player "+ i+1 + "lost").show();
-            }
-
-            if(snakesArr.length <= 1){
-                console.log("ik win");
-                //$("#waiting").text("You Won").show();
-            }
+            console.log("ik verlies");
         }
     });
 });
@@ -137,7 +128,7 @@ $("#highscore").click(function (e) {
             score = val.length;
         }
     });
-    $.post("/addScore",{name: "tetten",score:score}).done(function (data) {
+    $.post("/addScore",{id:socketid,name: "username",score:score}).done(function (data) {
         console.log(data);
     });
 });

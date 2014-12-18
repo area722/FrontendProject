@@ -46,5 +46,4 @@ require("./routes/routes")(app);
 
 //database
 require("./modules/database/connectDb");
-require("./modules/database/db");
 

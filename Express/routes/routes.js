@@ -11,9 +11,14 @@ module.exports = function(app){
     });
 
     app.post("/addScore",function(req,res){
-        //TODO. insert highscore in db
-        console.log(req.body);
-        //TODO. get hightscores from db
-        res.json({test:"tetten"});
+        var Score = require('../modules/database/models/score');
+        var newScore = new Score({id:req.body.id,name:req.body.name,highscore:req.body.score});
+        newScore.save(function () {
+            //get highscores from db
+            Score.find({}).exec(function (err, docs) {
+                res.json(docs);
+            });
+        });
+
     });
 };
