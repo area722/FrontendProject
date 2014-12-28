@@ -23,6 +23,7 @@
 
     function showPosition(pos){
         initialize(pos);
+        console.log(pos);
     }
     function error(errorGmaps){
         var message = "";

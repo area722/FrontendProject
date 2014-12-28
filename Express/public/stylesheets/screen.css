@@ -131,6 +131,31 @@ h4 {
     position: absolute;
     left: 71%;
     top: 50%; }
+  #slide-3 #pictionaryDiv {
+    position: absolute;
+    left: 18%;
+    top: 3%;
+    display: none;
+    width: 950px;
+    height: 650px; }
+    #slide-3 #pictionaryDiv svg {
+      position: absolute;
+      z-index: 0; }
+    #slide-3 #pictionaryDiv #picCanvas {
+      position: absolute;
+      z-index: 3;
+      margin-left: 4%;
+      margin-top: 3%;
+      cursor: crosshair; }
+    #slide-3 #pictionaryDiv #black, #slide-3 #pictionaryDiv #white, #slide-3 #pictionaryDiv #red, #slide-3 #pictionaryDiv #blue, #slide-3 #pictionaryDiv #green {
+      cursor: pointer; }
+    #slide-3 #pictionaryDiv #textGues {
+      display: none; }
+    #slide-3 #pictionaryDiv .char {
+      float: left;
+      margin-left: 16px;
+      user-select: none;
+      cursor: pointer; }
 
 #slide-4 {
   background: radial-gradient(#8d949b, #5d6770); }

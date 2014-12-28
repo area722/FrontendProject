@@ -185,6 +185,43 @@ h4{
     top: 50%;
   }
 
+  #pictionaryDiv{
+    position: absolute;
+    left:18%;
+    top:3%;
+    display: none;
+    width: 950px;
+    height: 650px;
+
+    svg{
+      position: absolute;
+      z-index: 0;
+    }
+    #picCanvas{
+      position: absolute;
+      z-index: 3;
+      margin-left: 4%;
+      margin-top: 3%;
+      cursor: crosshair;
+    }
+
+    #black,#white,#red,#blue,#green{
+      cursor: pointer;
+    }
+
+    #textGues{
+      display: none;
+    }
+
+    .char{
+      float: left;
+      margin-left: 16px;
+      user-select: none;
+      cursor: pointer;
+    }
+
+  }
+
 }
 
 //slide 4
