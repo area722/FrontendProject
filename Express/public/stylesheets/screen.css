@@ -246,12 +246,14 @@ h4 {
     float: left;
     width: 37%;
     height: 71%;
-    margin-top: 8%;
+    margin-top: 3%;
     margin-left: 6%; }
   #slide-5 #date5 {
     position: absolute;
     top: 70%;
     left: 44%; }
+  #slide-5 #os p {
+    font-size: 13px; }
 
 /* progressbar */
 #progress {

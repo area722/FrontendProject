@@ -23,6 +23,7 @@ function getWorker(){
 
 function workDone(res){
     console.log(res.data);
+
 }
 
 function workErr(){
