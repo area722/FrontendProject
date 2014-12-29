@@ -31,6 +31,12 @@ var pic = function (io) {
         socket.on("erase", function (data) {
            io.sockets.to(data.room).emit("eraseServer",{x:data.x,y:data.y});
         });
+        socket.on("geusedWrong", function (data) {
+           io.sockets.to(data.room).emit("wrongGeusServer",data.text);
+        });
+        socket.on("geusedRight", function (data) {
+           io.sockets.to(data).emit("quesedRightServer");
+        });
     });
 };
 

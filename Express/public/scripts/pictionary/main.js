@@ -50,6 +50,15 @@ socket.on("playersReadyPic", function (data) {
 
         $("#textGues").text(data.word.word);
         $("#textGues").show();
+
+        socket.on("wrongGeusServer", function (data) {
+            $("#textGues").hide();
+            $("#opendGues").text("Jouw tegenstander raade "+data);
+            setTimeout(function(){
+                $("#opendGues").text("");
+                $("#textGues").show();
+            }, 3000);
+        });
     }
     else{
         $("#krijtjes").hide();
@@ -63,7 +72,9 @@ socket.on("playersReadyPic", function (data) {
         });
 
         var text = "";
-        $(".char").on("click",function (e) {
+        $(".char").on("click",charClick);
+
+        function charClick(e){
             text += $(e.currentTarget).text();
             $("#textGuesed").text(text);
             $(e.currentTarget).remove();
@@ -72,19 +83,19 @@ socket.on("playersReadyPic", function (data) {
             if(text.split('').length === data.word.word.split('').length){
                 if(text === data.word.word){
                     console.log("correct");
+                    socket.emit("geusedRight",data.arr[0].room);
                 }
                 else{
-                    console.log("retry");
+                    socket.emit("geusedWrong",{room:data.arr[0].room,text:text});
                     text = "";
                     $("#textGuesed").text(text);
                     $.each(shuffled, function (i,val) {
                         $("#chars").append("<p class='char'>"+val+"</p>");
                     });
+                    $(".char").on("click",charClick);
                 }
             }
-        });
-
-
+        }
     }
 
     function getMousePos(evt) {
@@ -123,20 +134,25 @@ socket.on("playersReadyPic", function (data) {
     });
 
     //click on chalks
-    $("#black").click(function(e){
+    $("#black").click(function(){
         color = 4;
     });
-    $("#white").click(function(e){
+    $("#white").click(function(){
        color = 3;
     });
-    $("#blue").click(function(e){
+    $("#blue").click(function(){
        color = 2;
     });
-    $("#green").click(function(e){
+    $("#green").click(function(){
        color = 1;
     });
-    $("#red").click(function(e){
+    $("#red").click(function(){
        color = 0;
+    });
+
+    socket.on("quesedRightServer", function () {
+        $("#textGues").text("Goed geraden!");
+        $("#textGuesed").text("Goed geraden!");
     });
 });
 

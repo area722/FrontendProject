@@ -1898,6 +1898,7 @@
 </g>
 <text id="textGues" x="360" y="700" font-size="48px" font-family="Love Ya Like A Sister">I love SVG!</text>
 <text id="textGuesed" x="360" y="700" font-size="48px" font-family="Love Ya Like A Sister"></text>
+<text id="opendGues" x="360" y="700" font-size="48px" font-family="Love Ya Like A Sister"></text>
 <foreignObject x="1000" y="620" width="500" height="100" id="chars" font-size="48px" font-family="Love Ya Like A Sister">
 <body xmlns="http://www.w3.org/1999/xhtml">
 </body>
