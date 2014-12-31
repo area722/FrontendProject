@@ -254,6 +254,41 @@ h4 {
     left: 44%; }
   #slide-5 #os p {
     font-size: 13px; }
+  #slide-5 #today {
+    background-color: #797979;
+    width: 100%;
+    height: 100%; }
+    #slide-5 #today p {
+      margin: 0%;
+      padding: 0%; }
+    #slide-5 #today #location {
+      padding-top: 3%;
+      text-align: center;
+      font-size: 20px; }
+    #slide-5 #today #temp, #slide-5 #today #weather {
+      overflow: hidden;
+      float: left;
+      width: 50%;
+      font-size: 20px; }
+    #slide-5 #today #weather {
+      width: 43%;
+      height: 28%;
+      margin-top: 4%; }
+    #slide-5 #today #tempLow, #slide-5 #today #tempHigh {
+      overflow: hidden; }
+      #slide-5 #today #tempLow p, #slide-5 #today #tempLow img, #slide-5 #today #tempHigh p, #slide-5 #today #tempHigh img {
+        float: left;
+        width: 45%; }
+      #slide-5 #today #tempLow p, #slide-5 #today #tempHigh p {
+        margin-top: 11%; }
+    #slide-5 #today #tempHigh {
+      margin-top: -3%; }
+    #slide-5 #today #sun {
+      margin-top: 3%; }
+      #slide-5 #today #sun img, #slide-5 #today #sun p {
+        float: left; }
+      #slide-5 #today #sun img {
+        width: 24%; }
 
 /* progressbar */
 #progress {
