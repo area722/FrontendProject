@@ -17,6 +17,7 @@ module.exports = function(app){
             //get highscores from db
             Score.find({}).exec(function (err, docs) {
                 res.json(docs);
+                res.end();
             });
         });
 

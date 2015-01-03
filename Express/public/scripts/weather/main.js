@@ -29,58 +29,46 @@ function workDone(res){
     //condition
     getCondintions(res.data.item.forecast[0].code);
     function getCondintions(con){
-        var img = $("#weather img")[0];
         if(con >= 0 && con <= 47){
             if(con >= 0 && con <= 4){
-                $(img).attr("src","/img/weather/lightning.svg");
                 return "thunder";
             }
             else if(con >= 5 && con <= 7){
-                $(img).attr("src","/img/weather/rain.svg");
                 return "rain";
             }else if(con >= 8 && con <= 10){
-                $(img).attr("src","/img/weather/drizzle.svg");
                 return "drizzle";
             }else if(con >= 11 && con <= 12){
-                $(img).attr("src","/img/weather/rain.svg");
                 return "rain";
             }else if(con >= 13 && con <= 16){
-                $(img).attr("src","/img/weather/snow.svg");
                 return "snow";
             }else if(con == 17){
-                $(img).attr("src","/img/weather/hail.svg");
                 return "hail";
             }else if(con == 20){
-                $(img).attr("src","/img/weather/fog.svg");
                 return "fog";
             }else if(con == 24){
-                $(img).attr("src","/img/weather/wind.svg");
                 return "wind";
             }else if(con >= 27 && con <= 30){
-                $(img).attr("src","/img/weather/cloudsun.svg");
                 return "cloudsun";
             }else if(con == 32){
-                $(img).attr("src","/img/weather/sun.svg");
-                return "sunny";
+                return "sun";
             }else if(con >= 44 && con <= 47){
-                $(img).attr("src","/img/weather/cloudsun.svg");
                 return "cloudsun";
             }
             else{
-                $(img).attr("src","/img/weather/sun.svg");
-                return "sunny";
+                return "sun";
             }
         }
         else{
             console.log("there went something wrong");
         }
     }
+    $($("#weather img")[0]).attr("src","/img/weather/"+getCondintions(res.data.item.forecast[0].code)+".svg");
 
     //temp
     getTemp(res.data.item.forecast[0].low,res.data.item.forecast[0].high);
     function getTemp(low,high){
-        $("#tempHighP").text(high + "°");
-        $("#tempLowP").text(low + "°");
+        $("#tempHighP").text(high + "° (max)");
+        $("#tempLowP").text(low + "° (min)");
 
         if(high >= 20){
             $($("#tempHighImg")[0]).attr("src","/img/weather/thermometer100.svg")
@@ -92,6 +80,22 @@ function workDone(res){
     function getSun(sunRise,sunSet){
         $("#sunriseP").text(sunRise);
         $("#sunsetP").text(sunSet);
+    }
+
+    //forecast
+    getForecast(res.data.item.forecast[1],res.data.item.forecast[2])
+    function getForecast(tom,aft){
+        console.log(tom);
+        console.log(aft);
+        $($("#tomorow #day")[0]).text(tom.day);
+        $($("#dayAfter #day")[0]).text(aft.day);
+
+        $($("#tomorow #weather img")[0]).attr("src","/img/weather/"+getCondintions(tom.code)+".svg");
+        $($("#dayAfter #weather img")[0]).attr("src","/img/weather/"+getCondintions(aft.code)+".svg");
+        $("#tempLowPTom").text(tom.low + "° (min)");
+        $("#tempHighPTom").text(tom.high + "° (max)");
+        $("#tempLowPAft").text(aft.low + "° (min)");
+        $("#tempHighPAft").text(aft.high + "° (max)");
     }
 }
 

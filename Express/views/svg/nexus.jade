@@ -5,7 +5,7 @@
    p=os
 </body>
 </foreignObject>
-<foreignObject x="297" y="157" width="282" height="400">
+<foreignObject x="297" y="157" width="282" height="230">
 <body xmlns="http://www.w3.org/1999/xhtml">
 #today
    p(id="location")
@@ -18,11 +18,45 @@
          p(id="tempHighP")
    #weather
       img(src="")
-   #sun
-      img(src="/img/weather/sunrise.svg")
-      p(id="sunriseP")
-      img(src="/img/weather/sunset.svg")
-      p(id="sunsetP")
+</body>
+</foreignObject>
+<foreignObject x="297" y="310" width="282" height="50">
+<body xmlns="http://www.w3.org/1999/xhtml">
+#sun
+   img(src="/img/weather/sunrise.svg")
+   p(id="sunriseP")
+   img(src="/img/weather/sunset.svg")
+   p(id="sunsetP")
+</body>
+</foreignObject>
+<foreignObject x="297" y="390" width="282" height="100">
+<body xmlns="http://www.w3.org/1999/xhtml">
+#tomorow
+   p(id="day")
+   #temp
+      #tempLow
+         img(id="tempLowImgTom",src="/img/weather/thermometer0.svg")
+         p(id="tempLowPTom")
+      #tempHigh
+         img(id="tempHighImgTom",src="/img/weather/thermometer50.svg")
+         p(id="tempHighPTom")
+   #weather
+      img(src="")
+</body>
+</foreignObject>
+<foreignObject x="297" y="493" width="282" height="100">
+<body xmlns="http://www.w3.org/1999/xhtml">
+#dayAfter
+   p(id="day")
+   #temp
+      #tempLow
+         img(id="tempLowImgAft",src="/img/weather/thermometer0.svg")
+         p(id="tempLowPAft")
+      #tempHigh
+         img(id="tempHighImgAft",src="/img/weather/thermometer50.svg")
+         p(id="tempHighPAft")
+   #weather
+      img(src="")
 </body>
 </foreignObject>
 </svg>
