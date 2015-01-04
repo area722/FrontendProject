@@ -128,18 +128,14 @@ socket.on("disconnect",function(data){
 });
 
 $("#highscore").click(function (e) {
-    if($("#highscoreInput #name").val() != "") {
+    if($("#highscoreInput #name").val() !== "") {
         $.post("/addScore", {id: socketid, name: $("#highscoreInput #name").val(), score: score}).done(function (data) {
             console.log(data);
             $("#snakeDiv").hide();
             $("#highscores").show();
             var html = '';
             $.each(data, function (i, val) {
-                html += '<tr><td class="name">'
-                + val.name
-                + '</td><td class="score">'
-                + val.highscore
-                + '</td></tr>';
+                html += '<tr><td class="name">' + val.name + '</td><td class="score">' + val.highscore + '</td></tr>';
             });
             $("#highscores table").append(html);
         });

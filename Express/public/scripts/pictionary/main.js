@@ -25,7 +25,7 @@ socket.on("playersReadyPic", function (data) {
 
         console.log("you draw");
         //disable right mouse click
-        $("#picCanvas").bind('contextmenu', function(){ return false });
+        $("#picCanvas").bind('contextmenu', function(){ return false; });
         $("#picCanvas").on("mousedown",function(e){
             if(e.which === 1){
                 drawBool = true;

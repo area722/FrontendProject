@@ -2,6 +2,7 @@
  * Created by Wouter on 22/11/14.
  */
 
+var posGlobal;
 (function getLocation() {
     var pos,nav = null;
     if (nav === null) {
@@ -13,7 +14,6 @@
             geoloc.getCurrentPosition(showPosition, error);
         }
         else {
-            initialize(pos);
             console.log("Geolocation not supported");
         }
     }
@@ -25,7 +25,9 @@
         initialize(pos);
         console.log(pos);
     }
+
     function error(errorGmaps){
+        posGlobal = {D:50.8333,k:50.8333};
         var message = "";
         // Check for known errors
         switch (errorGmaps.code) {
@@ -57,10 +59,9 @@
     }
 })();
 
-var posGlobal;
-var mapGlobal;
 function initialize(pos) {
     posGlobal = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
+    console.log(posGlobal);
     var mapOptions = {
         scrollwheel: false,
         navigationControl: false,
@@ -73,7 +74,6 @@ function initialize(pos) {
         mapTypeId: google.maps.MapTypeId.SATELLITE
     };
     var map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
-    mapGlobal = map;
     var marker = new google.maps.Marker({
         position: new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude),
         map: map,
@@ -81,8 +81,8 @@ function initialize(pos) {
     });
 
     google.maps.event.addDomListener(window, 'scroll', function() {
-        google.maps.event.trigger(mapGlobal, "resize");
-        mapGlobal.setCenter(posGlobal);
+        google.maps.event.trigger(map, "resize");
+        map.setCenter(posGlobal);
     });
 }
 

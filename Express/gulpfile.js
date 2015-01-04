@@ -11,9 +11,7 @@ var gulp = require("gulp"),
     concat = require('gulp-concat'),
     notify = require('gulp-notify'),
     rename = require('gulp-rename'),
-    del = require('del'),
-    browserSync = require('browser-sync');
-
+    del = require('del');
 
 gulp.task('clean', function(cb) {
     del(['public/build'], cb)
@@ -29,6 +27,14 @@ gulp.task('js', function () {
         .pipe(uglify())
         .pipe(gulp.dest('public/build/js'))
         .pipe(notify({ message: 'js task complete' }));
+});
+
+gulp.task('hint',function(){
+    return gulp.src(['!public/scripts/**/*.js','modules/**/*.js','routes/**/*.js','app.js'])
+        .pipe(jshint())
+        .pipe(jshint.reporter('default'))
+        .pipe(notify({ message: 'js task complete' }));
+
 });
 
 gulp.task('lib',function(){
@@ -57,7 +63,7 @@ gulp.task('images', function() {
 });
 
 gulp.task('default', ['clean'], function() {
-    gulp.start('images','js','lib','css');
+    gulp.start('js','lib','css');
 });
 
 gulp.task('validate', function () {

@@ -8,15 +8,23 @@ function getWorker(){
     worker.onerror = workErr;
     return worker;
 }
-
+var count = 0;
 (function getWeather(){
-    if(posGlobal != null){
-        getWorker().postMessage(posGlobal);
-    }
-    else{
-        setTimeout(function () {
-            getWeather();
-        },100);
+    var a=navigator.onLine;
+    if(a) {
+        if (posGlobal !== null) {
+            getWorker().postMessage(posGlobal);
+        }
+        else {
+            setTimeout(function () {
+                getWeather();
+            }, 100);
+        }
+    }else{
+        $.getJSON("/scripts/weather/data.json", function (data) {
+            workDone({data:data.query.results.channel});
+        });
+
     }
 })();
 
@@ -71,7 +79,7 @@ function workDone(res){
         $("#tempLowP").text(low + "° (min)");
 
         if(high >= 20){
-            $($("#tempHighImg")[0]).attr("src","/img/weather/thermometer100.svg")
+            $($("#tempHighImg")[0]).attr("src","/img/weather/thermometer100.svg");
         }
     }
 
@@ -83,7 +91,7 @@ function workDone(res){
     }
 
     //forecast
-    getForecast(res.data.item.forecast[1],res.data.item.forecast[2])
+    getForecast(res.data.item.forecast[1],res.data.item.forecast[2]);
     function getForecast(tom,aft){
         console.log(tom);
         console.log(aft);
