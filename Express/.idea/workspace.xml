@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d4a2aaa-797f-43f8-b341-71eb2b57a3be" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/pictionary/main.js" afterPath="$PROJECT_DIR$/public/scripts/pictionary/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/screen.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/screen.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/screen.css" afterPath="$PROJECT_DIR$/public/stylesheets/screen.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/screen.scss" afterPath="$PROJECT_DIR$/public/stylesheets/screen.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/slides/slide3.jade" afterPath="$PROJECT_DIR$/views/slides/slide3.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="2f154522-41fb-4bad-b5bb-57da69dde26a" name="New changelist" comment="" />
@@ -55,8 +50,8 @@
       <file leaf-file-name="screen.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/screen.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="4.3415637" vertical-offset="1140" max-vertical-offset="8100">
-              <caret line="287" column="16" selection-start-line="287" selection-start-column="16" selection-end-line="287" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.3909465" vertical-offset="1140" max-vertical-offset="8100">
+              <caret line="95" column="20" selection-start-line="95" selection-start-column="20" selection-end-line="95" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -578,7 +573,13 @@
       <option name="project" value="LOCAL" />
       <updated>1420385728613</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="you draw/guess shown = ALL DONE!">
+      <created>1420389454558</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1420389454558</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -659,7 +660,8 @@
     <MESSAGE value="highscore input added" />
     <MESSAGE value="highscore style complete&#10;" />
     <MESSAGE value="play buttons styled" />
-    <option name="LAST_COMMIT_MESSAGE" value="play buttons styled" />
+    <MESSAGE value="you draw/guess shown = ALL DONE!" />
+    <option name="LAST_COMMIT_MESSAGE" value="you draw/guess shown = ALL DONE!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1026,8 +1028,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/screen.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.3415637" vertical-offset="1140" max-vertical-offset="8100">
-          <caret line="287" column="16" selection-start-line="287" selection-start-column="16" selection-end-line="287" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.3909465" vertical-offset="1140" max-vertical-offset="8100">
+          <caret line="95" column="20" selection-start-line="95" selection-start-column="20" selection-end-line="95" selection-end-column="20" />
           <folding />
         </state>
       </provider>
