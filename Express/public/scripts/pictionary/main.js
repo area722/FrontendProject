@@ -13,14 +13,16 @@ socket.on("readyPic", function (data) {
     $("#picCanvas")[0].width = 825;
     $("#picCanvas")[0].height = 515;
     console.log("waiting for other players");
+    $("#waitingPic").show();
 });
 
 socket.on("playersReadyPic", function (data) {
-    console.log("test");
     var drawBool = false;
     var eraseBool = false;
     var color = 0;
     if(data.arr[0].id == socketId){
+        $("#waitingPic").text("You draw");
+
         console.log("you draw");
         //disable right mouse click
         $("#picCanvas").bind('contextmenu', function(){ return false });
@@ -62,6 +64,8 @@ socket.on("playersReadyPic", function (data) {
         });
     }
     else{
+        $("#waitingPic").text("You guess");
+
         $("#krijtjes").hide();
         var shuffled = shuffle(data.word.word.split(''));
         function shuffle(o) {
@@ -98,6 +102,10 @@ socket.on("playersReadyPic", function (data) {
             }
         }
     }
+    setTimeout(function (e) {
+        $("#waitingPic").hide();
+    },2000);
+
 
     function getMousePos(evt) {
         var rect = $("#picCanvas")[0].getBoundingClientRect();

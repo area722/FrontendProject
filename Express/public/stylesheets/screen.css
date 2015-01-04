@@ -200,6 +200,11 @@ h4 {
       margin-left: 16px;
       user-select: none;
       cursor: pointer; }
+    #slide-3 #pictionaryDiv #waitingPic {
+      display: none;
+      position: absolute;
+      z-index: 1;
+      left: 15%; }
 
 #slide-4 {
   background: radial-gradient(#8d949b, #5d6770); }

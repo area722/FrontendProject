@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d4a2aaa-797f-43f8-b341-71eb2b57a3be" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/snake/main.js" afterPath="$PROJECT_DIR$/public/scripts/snake/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/scripts/pictionary/main.js" afterPath="$PROJECT_DIR$/public/scripts/pictionary/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/screen.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/screen.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/screen.css" afterPath="$PROJECT_DIR$/public/stylesheets/screen.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/screen.scss" afterPath="$PROJECT_DIR$/public/stylesheets/screen.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/slides/slide2.jade" afterPath="$PROJECT_DIR$/views/slides/slide2.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/slides/slide3.jade" afterPath="$PROJECT_DIR$/views/slides/slide3.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -34,30 +33,30 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/scripts/snake/main.js">
+        <entry file="file://$PROJECT_DIR$/public/scripts/pictionary/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1557" max-vertical-offset="2310">
-              <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1077" max-vertical-offset="2760">
+              <caret line="106" column="12" selection-start-line="106" selection-start-column="12" selection-end-line="106" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="slide3.jade" pinned="false" current-in-tab="true">
+      <file leaf-file-name="slide3.jade" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/slides/slide3.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0996016" vertical-offset="0" max-vertical-offset="753">
-              <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+              <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="slide2.jade" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/slides/slide2.jade">
+      <file leaf-file-name="screen.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/stylesheets/screen.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
-              <caret line="22" column="30" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="30" />
+            <state vertical-scroll-proportion="4.3415637" vertical-offset="1140" max-vertical-offset="8100">
+              <caret line="287" column="16" selection-start-line="287" selection-start-column="16" selection-end-line="287" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -107,13 +106,13 @@
         <option value="$PROJECT_DIR$/test.js" />
         <option value="$PROJECT_DIR$/public/scripts/weather/main.js" />
         <option value="$PROJECT_DIR$/views/svg/nexus.jade" />
-        <option value="$PROJECT_DIR$/public/scripts/pictionary/main.js" />
         <option value="$PROJECT_DIR$/modules/pictionary/pic.js" />
         <option value="$PROJECT_DIR$/routes/routes.js" />
         <option value="$PROJECT_DIR$/public/scripts/snake/main.js" />
-        <option value="$PROJECT_DIR$/views/slides/slide3.jade" />
         <option value="$PROJECT_DIR$/views/slides/slide2.jade" />
+        <option value="$PROJECT_DIR$/views/slides/slide3.jade" />
         <option value="$PROJECT_DIR$/public/stylesheets/screen.scss" />
+        <option value="$PROJECT_DIR$/public/scripts/pictionary/main.js" />
       </list>
     </option>
   </component>
@@ -287,6 +286,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="snake" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Express" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Express" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pictionary" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -551,7 +572,13 @@
       <option name="project" value="LOCAL" />
       <updated>1420380841732</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="play buttons styled">
+      <created>1420385728613</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1420385728613</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -631,7 +658,8 @@
     <MESSAGE value="weather completely done!" />
     <MESSAGE value="highscore input added" />
     <MESSAGE value="highscore style complete&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="highscore style complete&#10;" />
+    <MESSAGE value="play buttons styled" />
+    <option name="LAST_COMMIT_MESSAGE" value="play buttons styled" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -948,14 +976,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/scripts/pictionary/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.829609" vertical-offset="2282" max-vertical-offset="2640">
-          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/snake/snake.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="422" max-vertical-offset="780">
@@ -972,22 +992,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/screen.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21947874" vertical-offset="2735" max-vertical-offset="7995">
-          <caret line="193" column="5" selection-start-line="193" selection-start-column="5" selection-end-line="193" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/scripts/snake/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2310">
-          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/slides/slide2.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
@@ -996,10 +1000,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/scripts/snake/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.7888446" vertical-offset="1557" max-vertical-offset="2310">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/scripts/pictionary/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1077" max-vertical-offset="2760">
+          <caret line="106" column="12" selection-start-line="106" selection-start-column="12" selection-end-line="106" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/slides/slide3.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0996016" vertical-offset="0" max-vertical-offset="753">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/screen.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.3415637" vertical-offset="1140" max-vertical-offset="8100">
+          <caret line="287" column="16" selection-start-line="287" selection-start-column="16" selection-end-line="287" selection-end-column="16" />
           <folding />
         </state>
       </provider>
