@@ -119,8 +119,13 @@ h4 {
       right: 0;
       left: 2%;
       display: none; }
-  #slide-2 #highscores {
-    display: none; }
+  #slide-2 #highscores caption {
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5%; }
+  #slide-2 #highscores .name {
+    text-transform: capitalize; }
 
 #slide-3 {
   background: radial-gradient(#494c54, #2f323b); }

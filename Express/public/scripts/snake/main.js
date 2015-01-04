@@ -140,6 +140,14 @@ $("#highscore").click(function (e) {
         $("#snakeDiv").hide();
         $("#highscores").show();
 
-
+        var html = '';
+        $.each(data, function (i,val) {
+            html += '<tr><td class="name">'
+            + val.name
+            + '</td><td class="score">'
+            + val.highscore
+            + '</td></tr>';
+        });
+        $("#highscores table").append(html);
     });
 });

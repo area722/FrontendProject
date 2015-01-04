@@ -166,7 +166,16 @@ h4{
   }
 
   #highscores{
-    display: none;
+    //display: none;
+    caption{
+      font-size: 15px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 5%;
+    }
+    .name{
+      text-transform: capitalize;
+    }
   }
 }
 
