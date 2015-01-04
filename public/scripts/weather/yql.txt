@@ -1,5 +1,0 @@
-SELECT * FROM geo.placefinder WHERE text="50.920493, 3.793498" and gflags="R"
-https://query.yahooapis.com/v1/public/yql?q=SELECT%20*%20FROM%20geo.placefinder%20WHERE%20text%3D%2250.920493%2C%203.793498%22%20and%20gflags%3D%22R%22%0A%0A&format=json&diagnostics=true&callback=
-
-select * from weather.forecast where woeid=12818496 and u='c'
-https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%3D12818496%20and%20u=%27c%27&format=json
