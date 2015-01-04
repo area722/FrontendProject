@@ -1,6 +1,4 @@
 /* vars */
-$greyBack: #2e2e2f;
-
 /* Main */
 *{
   padding:0;
@@ -10,7 +8,6 @@ $greyBack: #2e2e2f;
 body, html {
   height: 100%;
   min-height: 100%;
-  background-color: $greyBack;
   color: #ffffff;
 }
 
@@ -67,17 +64,16 @@ h4{
     right: 0;
     top:30%;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
   }
 
   h1{
     font-size: 110px;
-    font-family: 'Montserrat', sans-serif;
     text-shadow: 3px 1px 0px #6c6c6c;
   }
 
   h2{
     font-size: 65px;
-    font-family: 'Montserrat', sans-serif;
     text-shadow: 2px 1px 0px #6c6c6c;
     top: 50%;
   }
@@ -88,7 +84,6 @@ h4{
     top: 79%;
     left: 45%;
   }
-
 }
 
 // slide 2
@@ -106,6 +101,26 @@ h4{
     margin-top: 7.5%;
     margin-left: 15px;
     width: 445px;
+
+    p{
+      margin-bottom: 30px;
+    }
+
+    #snakePlay {
+      background-image: linear-gradient(to bottom, #7c87a7, #425380);
+      border-radius: 14px;
+      font-family: Montserrat;
+      color: #ffffff;
+      font-size: 20px;
+      padding: 10px 20px 10px 20px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    #snakePlay:hover {
+      background-image: linear-gradient(to bottom, #8c99bb, #5d6f9f);
+      text-decoration: none;
+    }
   }
 
   h3{
@@ -160,13 +175,17 @@ h4{
       text-align: center;
       top: 58%;
       right:0;
-      left:2%;
+      left:1%;
       display: none;
+
+      #highscore{
+        cursor: pointer;
+      }
     }
   }
 
   #highscores{
-    //display: none;
+    display: none;
     caption{
       font-size: 15px;
       font-weight: bold;
@@ -198,6 +217,26 @@ h4{
 
     h3{
       margin-bottom: 5px;
+    }
+
+    p{
+      margin-bottom: 30px;
+    }
+
+    #playPic{
+      background: linear-gradient(to bottom, #60636b, #414751);
+      border-radius: 14px;
+      font-family: Montserrat;
+      color: #ffffff;
+      font-size: 20px;
+      padding: 10px 20px 10px 20px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    #playPic:hover {
+      text-decoration: none;
+      background: linear-gradient(to bottom, #494c54,#2f323b);
     }
   }
 

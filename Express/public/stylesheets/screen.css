@@ -7,7 +7,6 @@
 body, html {
   height: 100%;
   min-height: 100%;
-  background-color: #2e2e2f;
   color: #ffffff; }
 
 h3 {
@@ -52,14 +51,13 @@ h4 {
   left: 0;
   right: 0;
   top: 30%;
-  text-align: center; }
+  text-align: center;
+  font-family: 'Montserrat', sans-serif; }
 #slide-1 h1 {
   font-size: 110px;
-  font-family: 'Montserrat', sans-serif;
   text-shadow: 3px 1px 0px #6c6c6c; }
 #slide-1 h2 {
   font-size: 65px;
-  font-family: 'Montserrat', sans-serif;
   text-shadow: 2px 1px 0px #6c6c6c;
   top: 50%; }
 #slide-1 #arrow {
@@ -79,6 +77,20 @@ h4 {
     margin-top: 7.5%;
     margin-left: 15px;
     width: 445px; }
+    #slide-2 #content p {
+      margin-bottom: 30px; }
+    #slide-2 #content #snakePlay {
+      background-image: linear-gradient(to bottom, #7c87a7, #425380);
+      border-radius: 14px;
+      font-family: Montserrat;
+      color: #ffffff;
+      font-size: 20px;
+      padding: 10px 20px 10px 20px;
+      text-decoration: none;
+      cursor: pointer; }
+    #slide-2 #content #snakePlay:hover {
+      background-image: linear-gradient(to bottom, #8c99bb, #5d6f9f);
+      text-decoration: none; }
   #slide-2 h3 {
     margin-bottom: 15px; }
   #slide-2 h4 {
@@ -117,15 +129,19 @@ h4 {
       text-align: center;
       top: 58%;
       right: 0;
-      left: 2%;
+      left: 1%;
       display: none; }
-  #slide-2 #highscores caption {
-    font-size: 15px;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 5%; }
-  #slide-2 #highscores .name {
-    text-transform: capitalize; }
+      #slide-2 #snakeDiv #highscoreInput #highscore {
+        cursor: pointer; }
+  #slide-2 #highscores {
+    display: none; }
+    #slide-2 #highscores caption {
+      font-size: 15px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 5%; }
+    #slide-2 #highscores .name {
+      text-transform: capitalize; }
 
 #slide-3 {
   background: radial-gradient(#494c54, #2f323b); }
@@ -141,6 +157,20 @@ h4 {
     width: 450px; }
     #slide-3 #content h3 {
       margin-bottom: 5px; }
+    #slide-3 #content p {
+      margin-bottom: 30px; }
+    #slide-3 #content #playPic {
+      background: linear-gradient(to bottom, #60636b, #414751);
+      border-radius: 14px;
+      font-family: Montserrat;
+      color: #ffffff;
+      font-size: 20px;
+      padding: 10px 20px 10px 20px;
+      text-decoration: none;
+      cursor: pointer; }
+    #slide-3 #content #playPic:hover {
+      text-decoration: none;
+      background: linear-gradient(to bottom, #494c54, #2f323b); }
   #slide-3 #date3 {
     position: absolute;
     left: 71%;

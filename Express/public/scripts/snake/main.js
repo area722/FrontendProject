@@ -1,10 +1,7 @@
 /**
  * Created by Wouter on 25/11/14.
  */
-var socket = io.connect();
-var canvas = $("#snakeCanvas")[0],ctx = canvas.getContext("2d"),w,h,celWidth = 10,snakesArr = [],food;
-var snake;
-var socketid = "";
+var socket = io.connect(),canvas = $("#snakeCanvas")[0],ctx = canvas.getContext("2d"),w,h,celWidth = 10,snakesArr = [],food,snake,socketid = "",score=0;
 canvas.width = 900;
 canvas.height = 650;
 
@@ -15,6 +12,7 @@ $("#snakePlay").on("click", function (e) {
     w = canvas.width;
     h = canvas.height;
     socket.emit("play");
+    $(e.currentTarget).hide();
 });
 
 socket.on("ready", function (data) {
@@ -104,6 +102,7 @@ socket.on("newFood", function (data) {
 socket.on("deadServer",function(data){
     $.each(snakesArr,function (i,val) {
         if(val.id === data.id) {
+            score = val.length;
             snakesArr.splice(i,1);
         }
     });
@@ -129,25 +128,22 @@ socket.on("disconnect",function(data){
 });
 
 $("#highscore").click(function (e) {
-    var score = 0;
-    $.each(snakesArr,function (i,val) {
-        if (val.id === socketid) {
-            score = val.length;
-        }
-    });
-    $.post("/addScore",{id:socketid,name: $("#highscoreInput #name").val(),score:score}).done(function (data) {
-        console.log(data);
-        $("#snakeDiv").hide();
-        $("#highscores").show();
-
-        var html = '';
-        $.each(data, function (i,val) {
-            html += '<tr><td class="name">'
-            + val.name
-            + '</td><td class="score">'
-            + val.highscore
-            + '</td></tr>';
+    if($("#highscoreInput #name").val() != "") {
+        $.post("/addScore", {id: socketid, name: $("#highscoreInput #name").val(), score: score}).done(function (data) {
+            console.log(data);
+            $("#snakeDiv").hide();
+            $("#highscores").show();
+            var html = '';
+            $.each(data, function (i, val) {
+                html += '<tr><td class="name">'
+                + val.name
+                + '</td><td class="score">'
+                + val.highscore
+                + '</td></tr>';
+            });
+            $("#highscores table").append(html);
         });
-        $("#highscores table").append(html);
-    });
+    }else{
+        $("#highscoreInput #name").attr("placeholder","please fill in a name");
+    }
 });
