@@ -154,6 +154,19 @@ h4{
       color: #1f2c13;
       font-size: 40px;
     }
+
+    #highscoreInput{
+      position: fixed;
+      text-align: center;
+      top: 58%;
+      right:0;
+      left:2%;
+      display: none;
+    }
+  }
+
+  #highscores{
+    display: none;
   }
 }
 
@@ -447,7 +460,6 @@ h4{
         float: left;
         width: 26%;
       }
-
       p{
         font-size: 12px;
       }

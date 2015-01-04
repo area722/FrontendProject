@@ -15,7 +15,7 @@ module.exports = function(app){
         var newScore = new Score({id:req.body.id,name:req.body.name,highscore:req.body.score});
         newScore.save(function () {
             //get highscores from db
-            Score.find({}).exec(function (err, docs) {
+            Score.find({}).sort({highscore: -1}).exec(function (err, docs) {
                 res.json(docs);
                 res.end();
             });

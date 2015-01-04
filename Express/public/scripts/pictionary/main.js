@@ -16,6 +16,7 @@ socket.on("readyPic", function (data) {
 });
 
 socket.on("playersReadyPic", function (data) {
+    console.log("test");
     var drawBool = false;
     var eraseBool = false;
     var color = 0;

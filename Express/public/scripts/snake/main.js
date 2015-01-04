@@ -87,8 +87,6 @@ socket.on("serverControl", function (data) {
     $.each(snakesArr, function (i,val) {
         if(val.id === data.id && val.direction !== data.control.d){
             val.direction = data.control.d;
-            //val.nx = data.control.x;
-            //val.ny = data.control.y;
         }
     });
 });
@@ -107,9 +105,18 @@ socket.on("deadServer",function(data){
     $.each(snakesArr,function (i,val) {
         if(val.id === data.id) {
             snakesArr.splice(i,1);
-            console.log("ik verlies");
         }
     });
+    $("#waiting").show();
+    $("#highscoreInput").show();
+
+    if(data.id == socketid){
+        console.log("ik verlies");
+        $("#waiting h4").text("you lost");
+    }else{
+        console.log("ik win");
+        $("#waiting h4").text("you won");
+    }
 });
 
 socket.on("disconnect",function(data){
@@ -128,7 +135,11 @@ $("#highscore").click(function (e) {
             score = val.length;
         }
     });
-    $.post("/addScore",{id:socketid,name: "username",score:score}).done(function (data) {
+    $.post("/addScore",{id:socketid,name: $("#highscoreInput #name").val(),score:score}).done(function (data) {
         console.log(data);
+        $("#snakeDiv").hide();
+        $("#highscores").show();
+
+
     });
 });

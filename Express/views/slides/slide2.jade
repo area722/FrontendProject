@@ -14,6 +14,12 @@ div(class="slide",id="slide-2")
             p 0 Players
          #waiting
             h4 waiting for other players
-      #highscore
-         p highscore
+            #highscoreInput
+               input(type="text",id="name")
+               p(id="highscore") submit highscore
       canvas(id="snakeCanvas")
+   #highscores
+      table
+         tr(class="row")
+            td(class="name")
+            td(class="score")
