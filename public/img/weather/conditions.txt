@@ -1,0 +1,11 @@
+0 -> 4 => thunder.svg
+5 -> 7 => rain.svg
+8 -> 10 => drizzle.svg
+11 -> 12 => rain.svg
+13 -> 16 => snow.svg
+17 => hail.svg
+20 => fog.svg
+24 => wind.svg
+27 -> 30 => cloudSun.svg
+32 => sunny.svg
+44 => cloudSun.svg

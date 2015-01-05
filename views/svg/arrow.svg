@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 612 792" xml:space="preserve">
+	<g>
+		<polygon fill="#666766" stroke="#FFFFFF" stroke-miterlimit="10" points="91.8,217 312.7,408.2 548.9,210.4 317.1,445.5 "/>
+		<polygon fill="#FFFFFF" stroke="#FFFFFF" stroke-miterlimit="10" points="89.8,211 310.7,402.2 546.9,204.4 315.1,439.5 "/>
+		<animateMotion
+		    from="0,0" to="0,80"
+		    dur="4s" fill="freeze" repeatCount="indefinite"/>
+	</g>
+</svg>
