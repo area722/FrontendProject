@@ -4,7 +4,7 @@
 
 module.exports = (function(){
     var mongoose = require("mongoose");
-    mongoose.connect("mongodb://localhost/snakeDB");
+    mongoose.connect("mongodb://localhost/snakedb");
     //online
     //mongoose.connect("mongodb://admin:password@ds031271.mongolab.com:31271/snakedb");
     mongoose.connection.on("open", function () {
