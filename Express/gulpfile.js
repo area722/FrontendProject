@@ -46,6 +46,7 @@ gulp.task('lib',function(){
         .pipe(notify({ message: 'lib task complete' }));
 });
 
+//werkt niet meer => media queries werken niet goed meer
 gulp.task('css', function () {
    return gulp.src(['public/stylesheets/**/*.css','!public/stylesheets/scroll.css'])
        .pipe(concat('style.css'))
@@ -63,7 +64,7 @@ gulp.task('images', function() {
 });
 
 gulp.task('default', ['clean'], function() {
-    gulp.start('js','lib','css');
+    gulp.start('js','lib');
 });
 
 gulp.task('validate', function () {
