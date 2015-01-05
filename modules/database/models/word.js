@@ -4,5 +4,5 @@
 
 var mongoose = require("mongoose");
 var wordSheme = require("../sheme/word");
-var word = mongoose.model('Word',wordSheme,"word");
+var word = mongoose.model('Word',wordSheme,"words");
 module.exports = word;
