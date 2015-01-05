@@ -2,7 +2,7 @@
  * Created by Wouter on 22/11/14.
  */
 var snake = function (io,app) {
-    var snakesArrServer = [],color = require("randomcolor");
+    var snakesArrServer = [];
     io.sockets.on("connection", function (socket) {
         socket.on("play", function (data) {
             socket.emit("ready",socket.id);
