@@ -8,7 +8,6 @@ var http = require("http");
 var path = require("path");
 var bodyParser = require("body-parser");
 var router = express.Router();
-var favicon = require('serve-favicon');
 
 var app = express();
 
@@ -19,7 +18,6 @@ app.set('view engine', 'jade');
 app.use(router);
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
-app.use(favicon(__dirname + '/public/img/favicon.ico'));
 app.use(bodyParser.urlencoded({
     extended: true
 }));
