@@ -213,10 +213,15 @@ h4 {
       margin-bottom: 5px; }
   #slide-4 input, #slide-4 button, #slide-4 select, #slide-4 option[value="none"] {
     display: none; }
+  #slide-4 .chat-no {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/content/Iphone.png"); }
   #slide-4 #chat {
     float: left;
     width: 23%;
-    height: 91%;
+    height: 87%;
     margin-top: 5%;
     margin-left: 23%; }
     #slide-4 #chat #rooms {

@@ -306,10 +306,17 @@ h4{
     display: none;
   }
 
+  .chat-no{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image:url('../img/content/Iphone.png');
+  }
+
   #chat{
     float: left;
     width: 23%;
-    height: 91%;
+    height: 87%;
     margin-top: 5%;
     margin-left: 23%;
 
