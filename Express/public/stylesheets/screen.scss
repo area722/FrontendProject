@@ -24,10 +24,6 @@ h4{
 /* SLIDES */
 .slide{
   min-width: 960px;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: scroll;
   height: 100%;
   width: 100%;
   position: fixed;
@@ -109,7 +105,7 @@ h4{
     #snakePlay {
       background-image: linear-gradient(to bottom, #7c87a7, #425380);
       border-radius: 14px;
-      font-family: Montserrat;
+      font-family: Montserrat,sans-serif;
       color: #ffffff;
       font-size: 20px;
       padding: 10px 20px 10px 20px;
@@ -293,13 +289,6 @@ h4{
 //slide 4
 #slide-4{
   background: radial-gradient(#8d949b,#5d6770);
-  img{
-    float: left;
-    width: 23%;
-    height: auto;
-    margin-top: 5%;
-    margin-left: 23%;
-  }
 
   #content{
     float: left;

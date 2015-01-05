@@ -12,7 +12,7 @@ var count = 0;
 (function getWeather(){
     var a=navigator.onLine;
     if(a) {
-        if (posGlobal !== null) {
+        if (posGlobal != null) {
             getWorker().postMessage(posGlobal);
         }
         else {
@@ -24,7 +24,6 @@ var count = 0;
         $.getJSON("/scripts/weather/data.json", function (data) {
             workDone({data:data.query.results.channel});
         });
-
     }
 })();
 

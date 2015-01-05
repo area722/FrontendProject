@@ -1,3 +1,19 @@
+@media screen and (min-width: 1900px) {
+  #slide-2 #nokiaImg {
+    margin-left: 30%; }
+  #slide-2 #snakeDiv {
+    left: 28%; }
+
+  #slide-3 #img3 {
+    width: 38%; }
+  #slide-3 #pictionaryDiv {
+    left: 29%; }
+
+  #slide-4 #chat {
+    margin-top: 2%; }
+
+  #slide-5 #imgNexus {
+    margin-left: 10%; } }
 @media screen and (max-width: 1200px) {
   #slide-1 h1, #slide-1 h2 {
     top: 30%; }

@@ -5,6 +5,7 @@ var socket = io.connect();
 var socketId;
 $("#playPic").on("click", function (e) {
     socket.emit("playPic");
+    $(e.currentTarget).hide();
 });
 
 socket.on("readyPic", function (data) {
