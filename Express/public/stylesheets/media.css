@@ -3,6 +3,9 @@
     margin-left: 30%; }
   #slide-2 #snakeDiv {
     left: 28%; }
+    #slide-2 #snakeDiv #highscoreInput {
+      top: 49%;
+      left: 5%; }
 
   #slide-3 #img3 {
     width: 38%; }
