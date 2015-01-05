@@ -4,9 +4,9 @@
 
 module.exports = (function(){
     var mongoose = require("mongoose");
-    mongoose.connect("mongodb://localhost/snakedb");
+    //mongoose.connect("mongodb://localhost/snakedb");
     //online
-    //mongoose.connect("mongodb://admin:password@ds031271.mongolab.com:31271/snakedb");
+    mongoose.connect("mongodb://admin:password@ds031271.mongolab.com:31271/snakedb");
     mongoose.connection.on("open", function () {
         console.log("connection met mongo server ");
         // get collection (=table) names als test
